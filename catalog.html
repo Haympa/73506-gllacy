@@ -5,6 +5,7 @@
     <title>Каталог</title>
   </head>
   <body>
+    <!-- Шапка сайта -->
     <header class="main-header">
 	  <div class="container">
 		<a href="index.html"><img class="logo" src="http://placehold.it/154x64" width="154" height="64" alt="Лого"></a>
@@ -26,8 +27,9 @@
 	  	<b>8 812 450-25-25</b>
 	  </p>
 	</header>
-
+    <!-- Основное содержимое -->
     <main class="container">
+      <!-- Хлебные крошки -->
       <div class="breadcrumbs">
         <ul>
       	  <li><a href="index.html">Главная</a></li>
@@ -36,9 +38,55 @@
       	</ul>
       </div>
       <h1>Сливочное мороженое</h1>
-      <form action="">
-      	
+      <!-- Фильтры -->
+      <form class="filters" action="">
+      	<span class="filter-title">Сортировка:</span>
+      	<select name="sorting">
+      	  <option value="Popular">По полуярности</option>
+      	  <option value="x"></option>
+      	</select>
+      	<span class="filter-title">Цена:</span>
+      	<span class="filter-title">Жирность:</span>
+      	<label>
+      	  <input type="radio" name="fatness" value="0"">
+      	  0%
+      	</label>
+        <label>
+      	  <input type="radio" name="fatness" value="10" checked>
+      	  до 10%
+      	</label>
+      	<label>
+      	  <input type="radio" name="fatness" value="30">
+      	  до 30%
+      	</label>
+      	<label>
+      	  <input type="radio" name="fatness" value="more"> 
+      	  выше 30%  
+      	</label>
+      	<span class="filter-title">Наполнители:</span>
+      	<label>
+      	  <input type="checkbox" name="chocolate" checked>
+          шоколадные
+        </label>
+      	<label>
+      	  <input type="checkbox" name="shugar" checked>
+          сахарные присыпки
+		</label>
+      	<label>
+      	  <input type="checkbox" name="fruit">
+          фрукты
+        </label>
+      	<label>
+      	  <input type="checkbox" name="syrup">
+          сиропы
+        </label>
+      	<label>
+      	  <input type="checkbox" name="jam">
+          джемы
+        </label>
+        <button type="submit">Применить</button>
       </form>
+      <!-- Список продуктов -->
       <div class="products">
 		<div class="product-item">		  
 		  <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Апельсиновое">
@@ -101,10 +149,16 @@
 		  	<a href="#">Сливочное с мятным сиропом</a>
 		  </div>
 		</div>
-
-        <!-- Здесь переключение по страничкам -->
+		<!-- переход по страницам -->
+        <ul class="pages">
+        	<li>1</li>
+        	<li>2</li>
+        	<li>3</li>
+        	<li>4</li>
+        	<li>5</li>
+        </ul>
     </main>
-
+    <!-- повдал сайта -->
     <footer class="main-footer">
 	  <div class="container">
 		<div class="footer-social">
