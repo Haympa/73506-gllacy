@@ -9,17 +9,60 @@
 	<header class="main-header">
 	  <div class="container">
 		<img class="logo" src="http://placehold.it/154x64" width="154" height="64" alt="Лого">
-		<div class="main-navigation">
+		<nav class="main-navigation">
 		  <ul>
-		    <li><a href="#">Каталог</a></li>
+		    <li><a href="#">Каталог</a>
+		      <ul>
+		      	<li>Новинки</li>
+		      	<li>Сливочное</li>
+		      	<li>Щербеты</li>
+		      	<li>Фруктовый лед</li>
+		      	<li>Мелорин</li>
+		      </ul>
+		    </li>
 			<li><a href="#">Доставка и оплата</a></li>
 			<li><a href="#">О компании</a></li>
 		  </ul>
-		</div>
+		</nav>
 		<div class="user-block">
-		  <a class="search" href="#">Поиск</a>
-		  <a class="login" href="#">Вход</a>
-		  <a class="basket" href="#">Корзина</a>
+		  <div class="search">
+		    <a href="#">Поиск</a>
+		    <input type="text" name="search" placeholder="Что ищем?">
+		  </div>
+		  <div class="login">
+		    <a href="#">Вход</a>
+		    <form action="">
+		      <input type="email" name="login" placeholder="Электронная почта">
+		      <input type="password" name="password" placeholder="Введите пароль">
+		      <button type="submit">Отправить</button>
+		    </form>
+		    <a href="#">Забыли пароль</a>
+		    <a href="#">Новая регистрация</a>
+		  </div>
+		  <div class="basket">
+		    <a href="#">Корзина</a>
+		    <table>
+		      <tr>
+		      	<td><img src="http://placehold.it/33x33" width="33" height="33" alt="Мороженка"></td>
+		      	<td>Пломбир с апельсиновым джемом</td>
+		      	<td>1,5 кг х <span>200 руб.</span></td>
+		      	<td>300 руб.</td>
+		      </tr>
+		      <tr>
+		      	<td><img src="http://placehold.it/33x33" width="33" height="33" alt="Мороженка"></td>
+		      	<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+		      	<td>1,5 кг х <span>300 руб.</span></td>
+		      	<td>450 руб.</td>
+		      </tr>
+		      <tr>
+		      	<td></td>
+		      	<td></td>
+		      	<td></td>
+		      	<td><b>Итого: 750 руб.<b></td>
+		      </tr>
+		    </table>
+		    <a href="#">Оформить заказ</a>		    
+		  </div>
 		</div>
 	  </div>
 	  <p class="phone">
@@ -31,60 +74,60 @@
 	<main class="container">
 	  <!-- Слайдер с рожками -->
       <div class="slider">
-      	<input type="radio" name="slider" id="slider1" checked>
-      	<label for="slider1"></label>
-      	<div>
-      	  <img class="left-cone" src="http://placehold.it/372x584" width="372" height="584" alt="Левый рожок">
-      	  <img class="right-cone" src="http://placehold.it/333x519" width="333" height="519" alt="Правый рожок">
-      	  <p>крем-брюле и пломбир с малиновым джемом</p>
-      	  <a href="#" class="btn">Давайте оба!</a>
-      	</div>
-      	<input type="radio" name="slider" id="slider2">
-      	<label for="slider2"></label>
-      	<div>      	  
-      	</div>
-      	<input type="radio" name="slider" id="slider3">
-      	<label for="slider3"></label>
-      	<div>    	 
-      	</div>
+        <img class="cone" src="http://placehold.it/900x881" width="900" height="881" alt="Супер-мороженка">
+        <p>Крем-брюле и пломбир с малиновым джемом</p>
+      	<a href="#" class="btn">Давайте оба!</a>  
+      	<ul>
+      	  <li></li>
+      	  <li></li>
+      	  <li></li>
+      	</ul>    	
       </div>
       <!-- Банеры -->
 	  <div class="banners">	  
 		<div class="banner-item">
-		  <h2 class="banner-item-title">Малинка даром!</h2>
+		  <h2>Малинка даром!</h2>
 		  <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малиновго варенья бесплатно.</p>
-		  <a class="btn" href="#">Хочу варенье!</a>
+		  <a href="#">Хочу варенье!</a>
 		</div>
 		<div class="banner-item">
-		  <h2 class="banner-item-title">Шоколадки даром!</h2>
+		  <h2>Шоколадки даром!</h2>
 		  <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-		  <a class="btn" href="#">Хочу шоколадки!</a>
+		  <a href="#">Хочу шоколадки!</a>
 		</div>
 	  </div>
 	  <!-- Список продуктов-хитов -->
 	  <div class="products">
 		<div class="product-item">
-		  <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		  <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Апельсиновое">
-		  <p><b>310 &#8381; </b>кг</p>
+		  <div>
+		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Апельсиновое">
+		    <p><b>310 &#8381; </b>кг</p>
+		  </div>
 		  <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 		</div>
 		<div class="product-item">
-		  <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		  <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Кофейное с шоколадом">
-		  <p><b>380 &#8381; </b>кг</p>
+		  <div>
+		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Кофейное с шоколадом">
+		    <p><b>380 &#8381; </b>кг</p>
+		  </div>
 		  <a href="#">Сливочно-кофейное с кусочками шоколада</a>
 		</div>
 		<div class="product-item">
-		  <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		  <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Клубничное с белым шоколадом">
-		  <p><b>355 &#8381; </b>кг</p>
+		  <div>
+		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Клубничное с белым шоколадом">
+		    <p><b>355 &#8381; </b>кг</p>
+		  </div>
 		  <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 		</div>
 		<div class="product-item">
-		  <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		  <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Крем-брюле с карамелью">
-		  <p><b>415 &#8381; </b>кг</p>
+		  <div>
+		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Крем-брюле с карамелью">
+		    <p><b>415 &#8381; </b>кг</p>
+		  </div>
 		  <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 		</div>
 	  </div>
@@ -96,26 +139,40 @@
 		<p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 		<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не даёт мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
 	  </div>
-	  <!-- Раздел последних новостей -->
-	  <div class="news">
-	  	<p>Новое в нашем блоге</p>
-	  	<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-	  </div>
-	  <!-- Раздел оформления рассылки -->
-	  <div class="subs">
-	  	<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-		<form>
-	  	  <input type="text" name="email" value="Электронная почта">
-	  	  <button type="submit">Отправить</button>
-		</form>
+	  <div>
+	    <!-- Раздел последних новостей -->
+	    <div class="news">
+	  	  <p>Новое в нашем блоге</p>
+	  	  <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+	    </div>
+	    <!-- Раздел оформления рассылки -->
+	    <div class="subs">
+	  	  <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+		  <form>
+	  	    <input type="email" name="email" placeholder="Электронная почта">
+	  	    <button type="submit">Отправить</button>
+		  </form>
+		</div>
 	  </div>
 	  <!-- Магазин на карте -->	  
 	  <div class="map">
 	  	<img class="address" src="http://placehold.it/900x430" alt="Мы на карте" width="900" height="430">
-	    <div class="contact">
-	  	  <p>Адрес главного офиса и офлайн магазина <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-	  	  <p>Для заказа по телефону <b>8 812 450-25-25</b> (с 10 до 20 ежеенвно)</p>
-	  	  <a class="btn" href="">Форма обартной связи</a>
+	  	<div class="container">
+	      <div class="contact">
+	  	    <p>Адрес главного офиса и офлайн магазина <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+	  	    <p>Для заказа по телефону <b>8 812 450-25-25</b> (с 10 до 20 ежеенвно)</p>
+	  	    <a class="btn" href="">Форма обартной связи</a>
+	  	    <div class="feedback">
+	  	      <h2>Мы обязательно вам ответим!</h2>
+	  	      <form action="">
+	  	        <input type="text" name="name" placeholder="Как вас зовут?">
+	  	        <input type="text" name="email" placeholder="Ваша почта для ответа?">
+	  	        <textarea name="sometext" placeholder="Напишите что-нибудь" rows="10" cols="50">
+	  	        </textarea>
+	  	        <button type="submit">Отправить</button>
+	  	      </form>
+	  	    </div>
+	      </div>
 	    </div>
 	  </div>
     </main>
@@ -123,18 +180,21 @@
 	<footer class="main-footer">
 	  <div class="container">
 		<div class="footer-social">
-		  <a href="#">Твиттер</a>
-		  <a href="#">Инстаграм</a>
-		  <a href="#">Фейсбук</a>
-		  <a href="#">Вконтакте</a>
+		  <a href="#" title="Твиттер"></a>
+		  <a href="#" title="Инстаграм"></a>
+		  <a href="#" title="Фейсбук"></a>
+		  <a href="#" title="Вконтакте"></a>
 		</div>
 		<div class="footer-menu">
-		  <a href="#">Для поставщиков</a>
-		  <a href="#">О производсте</a>
-		  <a href="#">Наши документы</a>
-		  <a href="#">экологические стандарты</a>
+		  <ul>
+		  	<li><a href="#">Для поставщиков</a></li>
+		  	<li><a href="#">О производсте</a></li>
+		  	<li><a href="#">Наши документы</a></li>
+		  	<li><a href="#">Экологические стандарты</a></li>
+		  </ul>
 		</div>
 		<div class="footer-copyright">
+		  <img src="http://placehold.it/108x438" width="108" height="38" alt="HTML Academy">
 		  <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
 		</div>
 	  </div>
