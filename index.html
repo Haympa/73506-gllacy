@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
   </head>
@@ -8,7 +9,7 @@
     <!-- Шапка сайта -->
 	<header class="main-header">
 	  <div class="container">
-		<img class="logo" src="http://placehold.it/154x64" width="154" height="64" alt="Лого">
+		<img class="logo" src="img/logo.svg" width="154" height="64" alt="Лого">
 		<nav class="main-navigation">
 		  <ul>
 		    <li><a href="#">Каталог</a>
@@ -43,13 +44,13 @@
 		    <a href="#">Корзина</a>
 		    <table>
 		      <tr>
-		      	<td><img src="http://placehold.it/33x33" width="33" height="33" alt="Мороженка"></td>
+		      	<td><img src="img/basket-orange.jpg" width="33" height="33" alt="Мороженка"></td>
 		      	<td>Пломбир с апельсиновым джемом</td>
 		      	<td>1,5 кг х <span>200 руб.</span></td>
 		      	<td>300 руб.</td>
 		      </tr>
 		      <tr>
-		      	<td><img src="http://placehold.it/33x33" width="33" height="33" alt="Мороженка"></td>
+		      	<td><img src="img/basket-strawberry.jpg" width="33" height="33" alt="Мороженка"></td>
 		      	<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 		      	<td>1,5 кг х <span>300 руб.</span></td>
 		      	<td>450 руб.</td>
@@ -74,7 +75,7 @@
 	<main class="container">
 	  <!-- Слайдер с рожками -->
       <div class="slider">
-        <img class="cone" src="http://placehold.it/900x881" width="900" height="881" alt="Супер-мороженка">
+        <img class="cone" src="img/Cones1.png" width="647" height="584" alt="Супер-мороженка">
         <p>Крем-брюле и пломбир с малиновым джемом</p>
       	<a href="#" class="btn">Давайте оба!</a>  
       	<ul>
@@ -100,32 +101,32 @@
 	  <div class="products">
 		<div class="product-item">
 		  <div>
-		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Апельсиновое">
+		    <img class="hit" src="img/hit.jpg" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="img/orange.jpg" width="267" height="267" alt="Апельсиновое">
 		    <p><b>310 &#8381; </b>кг</p>
 		  </div>
 		  <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 		</div>
 		<div class="product-item">
 		  <div>
-		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Кофейное с шоколадом">
+		    <img class="hit" src="img/hit.jpg" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="img/coffee.jpg" width="267" height="267" alt="Кофейное с шоколадом">
 		    <p><b>380 &#8381; </b>кг</p>
 		  </div>
 		  <a href="#">Сливочно-кофейное с кусочками шоколада</a>
 		</div>
 		<div class="product-item">
 		  <div>
-		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Клубничное с белым шоколадом">
+		    <img class="hit" src="img/hit.jpg" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="img/strawberry.jpg" width="267" height="267" alt="Клубничное с белым шоколадом">
 		    <p><b>355 &#8381; </b>кг</p>
 		  </div>
 		  <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 		</div>
 		<div class="product-item">
 		  <div>
-		    <img class="hit" src="http://placehold.it/61x61" width="61" height="61" alt="Хит">
-		    <img class="ice-cream" src="http://placehold.it/200x200" width="200" height="200" alt="Крем-брюле с карамелью">
+		    <img class="hit" src="img/hit.jpg" width="61" height="61" alt="Хит">
+		    <img class="ice-cream" src="img/cream-brule.jpg" width="267" height="267" alt="Крем-брюле с карамелью">
 		    <p><b>415 &#8381; </b>кг</p>
 		  </div>
 		  <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -156,7 +157,8 @@
 	  </div>
 	  <!-- Магазин на карте -->	  
 	  <div class="map">
-	  	<img class="address" src="http://placehold.it/900x430" alt="Мы на карте" width="900" height="430">
+	    <!-- пока картинкой -->
+	  	<img src="img/map.jpg" alt="Мы на карте" width="1200" height="430">
 	  	<div class="container">
 	      <div class="contact">
 	  	    <p>Адрес главного офиса и офлайн магазина <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
@@ -194,11 +196,10 @@
 		  </ul>
 		</div>
 		<div class="footer-copyright">
-		  <img src="http://placehold.it/108x438" width="108" height="38" alt="HTML Academy">
+		  <img src="img/logo-html.svg" width="108" height="38" alt="HTML Academy">
 		  <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
 		</div>
 	  </div>
 	</footer>
-	
   </body>
 </html>
