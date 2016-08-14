@@ -4,3 +4,8 @@ body {
 	line-height: 16px;
 	color: #cfffcc;
 }
+
+#map {
+	width: 1200px;
+	height: 430px;
+}
