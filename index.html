@@ -13,15 +13,17 @@
           zoom: 16 //масштаб
         }, {
           searchControlProvider: 'yandex#search'
-        }),
-	    //создание маркера; почему-то если задать var, ничего работать не будет 
-		myPlacemark = new ymaps.Placemark (myMap.getCenter(), {            
-          hintContent: 'Мороженка'
+        });
+        //запрет скроллинга при прокрутке страницы
+        myMap.behaviors.disable('scrollZoom');
+	    //создание маркера;
+		var myPlacemark = new ymaps.Placemark ([59.938631,30.323055], {            
+          hintContent: 'Магазин Глейси'
         }, {
              iconLayout: 'default#image',
              iconImageHref: 'img/pin.png', //иконка маркера
              iconImageSize: [218, 142], //размер маркера
-             iconImageOffset: [-330, -74] //смещение маркера
+             iconImageOffset: [-40, -142] //смещение маркера
         }); 
         //добавление маркера на карту    
         myMap.geoObjects.add(myPlacemark);
