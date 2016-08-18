@@ -1,7 +1,7 @@
 html,
 body {
   min-width: 1200px;
-  min-height: 2415px;
+  /*min-height: 2415px;*/
   margin: 0;
   padding: 0;
 }
@@ -86,7 +86,8 @@ body {
 }
 
 .products {
-	margin-bottom: 40px;
+/*	margin-bottom: 40px;*/
+	outline: 1px solid green;
 }
 
 .product-item {
@@ -94,6 +95,7 @@ body {
 	width: 267px;
 	min-height: 322px;
 	margin-right: 26px;
+	margin-bottom: 40px;
 	/*only for grid*/
 	outline: 1px solid yellow;
 }
@@ -108,7 +110,11 @@ body {
 	margin-bottom: 40px;
 	/*only for grid*/
 	outline: 1px solid yellow;
-	color: red;
+}
+
+.description p {
+	/*only for grid*/
+	outline: 1px solid yellow;
 }
 
 .description p:not(:first-child) {
@@ -176,4 +182,24 @@ body {
 	min-height: 85px;
 	/*only for grid*/
 	outline: 1px solid green;
+}
+
+/* catalog.html */
+
+.breadcrumbs {
+	width: 560px;
+	/*only for grid*/
+	outline: 1px solid yellow;
+}
+
+.filters {
+	width: 879px;
+	margin-bottom: 35px;
+	/*only for grid*/
+	outline: 1px solid yellow;
+}
+
+.pages {
+	margin-top: 100px;
+	margin-bottom: 30px;
 }
