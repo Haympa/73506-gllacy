@@ -32,7 +32,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-	<header class="main-header">
+	<header class="main-header clearfix">
 	  <div class="container">
 		<img class="logo" src="img/logo.svg" width="154" height="64" alt="Лого">
 		<nav class="main-navigation">
@@ -91,13 +91,14 @@
 		  </div>
 		</div>
 	  </div>
+	  
+	</header>
+    <!-- Основное содержимое -->
+	<main class="container">
 	  <p class="phone">
 	  	С 10 до 20, ежедневно <br>
 	  	<b>8 812 450-25-25</b>
 	  </p>
-	</header>
-    <!-- Основное содержимое -->
-	<main class="container">
 	  <!-- Слайдер с рожками -->
       <div class="slider">
         <img class="cone" src="img/Cones1.png" width="647" height="584" alt="Супер-мороженка">
@@ -110,7 +111,7 @@
       	</ul>    	
       </div>
       <!-- Банеры -->
-	  <div class="banners">	  
+	  <div class="banners clearfix">	  
 		<div class="banner-item">
 		  <h2>Малинка даром!</h2>
 		  <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малиновго варенья бесплатно.</p>
@@ -123,7 +124,7 @@
 		</div>
 	  </div>
 	  <!-- Список продуктов-хитов -->
-	  <div class="products">
+	  <div class="products clearfix">
 		<div class="product-item">
 		  <div>
 		    <img class="hit" src="img/hit.jpg" width="61" height="61" alt="Хит">
@@ -161,11 +162,11 @@
 	  <div class="description">
 	  	<p><b>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</b></p>
 		<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-		<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 		<p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+		<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 		<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не даёт мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
 	  </div>
-	  <div>
+	  <div class="clearfix"> 
 	    <!-- Раздел последних новостей -->
 	    <div class="news">
 	  	  <p>Новое в нашем блоге</p>
@@ -180,27 +181,26 @@
 		  </form>
 		</div>
 	  </div>	  
-	  	<div class="container">
-	  	  <div id="map"></div> <!-- Интерактиваня карта -->
-	      <div class="contact">
-	  	    <p>Адрес главного офиса и офлайн магазина <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-	  	    <p>Для заказа по телефону <b>8 812 450-25-25</b> (с 10 до 20 ежеенвно)</p>
-	  	    <a class="btn" href="">Форма обартной связи</a>
-	  	    <div class="feedback">
-	  	      <h2>Мы обязательно вам ответим!</h2>
-	  	      <form action="">
-	  	        <input type="text" name="name" placeholder="Как вас зовут?">
-	  	        <input type="text" name="email" placeholder="Ваша почта для ответа?">
-	  	        <textarea name="sometext" placeholder="Напишите что-нибудь" rows="10" cols="50">
-	  	        </textarea>
-	  	        <button type="submit">Отправить</button>
-	  	      </form>
-	  	    </div>
-	    </div>
+   	  <div id="map"></div> <!-- Интерактиваня карта -->
+      <div class="contact">
+  	    <p>Адрес главного офиса и офлайн магазина <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+  	    <p>Для заказа по телефону <b>8 812 450-25-25</b> (с 10 до 20 ежеенвно)</p>
+  	    <a class="btn" href="">Форма обартной связи</a>
+  	    <div class="feedback">
+  	      <h2>Мы обязательно вам ответим!</h2>
+  	      <form action="">
+  	        <input type="text" name="name" placeholder="Как вас зовут?">
+  	        <input type="text" name="email" placeholder="Ваша почта для ответа?">
+  	        <textarea name="sometext" placeholder="Напишите что-нибудь" rows="10" cols="50">
+  	        </textarea>
+  	        <button type="submit">Отправить</button>
+  	      </form>
+  	    </div>
+  	  </div>
     </main>
 	<!-- Подвал сайта -->
 	<footer class="main-footer">
-	  <div class="container">
+	  <div class="container clearfix">
 		<div class="footer-social">
 		  <a href="#" title="Твиттер"></a>
 		  <a href="#" title="Инстаграм"></a>
