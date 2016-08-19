@@ -17,6 +17,7 @@ body {
 }
 
 #map {
+	position: relative;
 	width: 1200px;
 	height: 430px;
 	margin-left: -27px;
@@ -53,12 +54,29 @@ body {
 	min-height: 73px;
 }
 
+/* Скрываем вложенное меню */
+.main-navigation li > ul {
+	display: none;
+}
+
 .user-block {
 	float: right;
 	width: 267px;
 	/* only for grid */
 	outline: 1px solid yellow;
 	min-height: 73px;
+}
+
+/* Скрываем элементы, появляющиеся при наведении или
+нажатии в блоке user-block */
+.search *:not(:first-child),
+.login *:not(:first-child),
+.basket *:not(:first-child) {
+	display: none;
+}
+
+.phone {
+	text-align: right;
 }
 
 .slider {
@@ -161,6 +179,26 @@ body {
 	margin-bottom: 40px;
 	/*only for grid*/
 	outline: 1px solid yellow;
+}
+
+.contact {
+	position: absolute;
+	z-index: 1;
+	right: 27px;
+	top: 62px;
+	width: 302px;
+	height: 305px;
+	background-color: #fff;
+	color: black;
+	/*only for grid*/
+	outline: 1px solid black;
+}
+
+/* Скрываем всплывающее окно обратной связи */
+.feedback {
+	display: none;
+	width: 477px;
+	height: 442px;
 }
 
 .main-footer {
