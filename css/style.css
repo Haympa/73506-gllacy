@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
 html,
 body {
   min-width: 1200px;
@@ -11,6 +13,7 @@ body {
 	line-height: 16px;
 	color: #cfffcc;
 	word-wrap: break-word;
+	font-family: 'Roboto', sans-serif;
 
 	/*background: #000000 url("../img/gllacy-index-1200.jpg") no-repeat 50%;
     background-size: 1200px auto;*/
@@ -54,9 +57,77 @@ body {
 	min-height: 73px;
 }
 
-/* Скрываем вложенное меню */
-.main-navigation li > ul {
+/* Оформление менюшки */
+.main-navigation ul:first-child {
+	position: relative;
+	margin: 0;
+	margin-top: 23px;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.main-navigation > ul > li {
+	display: inline-block;
+	margin-right: 5px;
+	white-space: nowrap;
+	vertical-align: center;
+}
+
+.main-navigation > ul> li > a {
+	display: block;
+	padding: 7px 14px;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+}
+
+.main-navigation > ul > li > a:hover {
+	background-color: #f7f6f3;
+	color: #333333;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 15px;
+}
+
+.main-navigation > ul > li > a:hover + .submenu {
+	display: block;
+}
+
+/* вложенное меню, по умолчанию скрыто*/
+.submenu {
 	display: none;
+	position: absolute;
+	top: 37px;
+	left: -7px;
+	width: 143px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 14px;
+	line-height: 16px;
+	background-color: #f8f7f4;
+	border-radius: 3px;
+}
+
+.submenu li {
+	margin-bottom: 5px;
+	white-space: nowrap;
+}
+
+.submenu a {
+	display: block;
+	padding: 7px 20px;
+	text-decoration: none;
+	color: #323232;
+}
+
+.submenu li:first-child a {
+	margin-left: 6px;
+	margin-right: 9px;
+	padding: 12px 14px;
+	border-bottom: 1px solid #d1d0ce;
+	font-weight: bold;
 }
 
 .user-block {
@@ -77,6 +148,7 @@ body {
 
 .phone {
 	text-align: right;
+	clear: both;
 }
 
 .slider {
@@ -146,7 +218,7 @@ body {
 	outline: 1px solid yellow;
 }
 
-.description p:not(:first-child) {
+.description p {
 	float: left;
 	width: 485px;
 	padding-left: 55px;
@@ -156,11 +228,11 @@ body {
 	outline: 1px solid brown;
 }
 
-.description p:nth-child(odd) {
+.description p:nth-of-type(even) {
 	margin-right: 0;
 }
 
-.description p:first-child {
+.description h2 {
 	padding-top: 30px;
 }
 
