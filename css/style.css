@@ -1,7 +1,6 @@
 html,
 body {
   min-width: 1200px;
-  /*min-height: 2415px;*/
   margin: 0;
   padding: 0;
 }
@@ -11,6 +10,7 @@ body {
 	font-size: 14px;
 	line-height: 16px;
 	color: #cfffcc;
+	word-wrap: break-word;
 
 	/*background: #000000 url("../img/gllacy-index-1200.jpg") no-repeat 50%;
     background-size: 1200px auto;*/
@@ -129,8 +129,8 @@ body {
 /* Убираем товарам нижней строки нижний внешний оступ */
 .product-item:nth-last-child(-n+4) {
 	margin-bottom: 0;
-	/*Вспомогательная подсветка элементов*/
-	background-color: #f43d21;
+	/*Вспомогательная подсветка элементов
+	background-color: #f43d21;*/
 }
 
 .description {
