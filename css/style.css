@@ -86,22 +86,33 @@ body {
 }
 
 .products {
-/*	margin-bottom: 40px;*/
+	margin-bottom: 40px;
+	font-size: 0;
+
 	outline: 1px solid green;
 }
 
 .product-item {
-	float: left;
+	display: inline-block;
 	width: 267px;
 	min-height: 322px;
 	margin-right: 26px;
 	margin-bottom: 40px;
+	font-size: 14px;
+	vertical-align: top;
 	/*only for grid*/
 	outline: 1px solid yellow;
 }
 
 .product-item:nth-child(4n) {
 	margin-right: 0;
+}
+
+/* Убираем товарам нижней строки нижний внешний оступ */
+.product-item:nth-last-child(-n+4) {
+	margin-bottom: 0;
+	/*Вспомогательная подсветка элементов*/
+	background-color: #f43d21;
 }
 
 .description {
