@@ -27,44 +27,44 @@
 		  </ul>
 		</div>
 		<div class="user-block">
-		  <div class="search">
-		    <a href="#">Поиск</a>
-		    <input type="text" name="search" placeholder="Что ищем?">
-		  </div>
-		  <div class="login">
-		    <a href="#">Вход</a>
-		    <form action="">
-		      <input type="email" name="login" placeholder="Электронная почта">
-		      <input type="password" name="password" placeholder="Введите пароль">
-		      <button type="submit">Отправить</button>
-		    </form>
-		    <a href="#">Забыли пароль</a>
-		    <a href="#">Новая регистрация</a>
-		  </div>
-		  <div class="basket">
-		    <a href="#">Корзина</a>
-		    <table>
-		      <tr>
-		      	<td><img src="img/basket-orange.jpg" width="33" height="33" alt="Мороженка"></td>
-		      	<td>Пломбир с апельсиновым джемом</td>
-		      	<td>1,5 кг х <span>200 руб.</span></td>
-		      	<td>300 руб.</td>
-		      </tr>
-		      <tr>
-		      	<td><img src="img/basket-strawberry.jpg" width="33" height="33" alt="Мороженка"></td>
-		      	<td>Клубничный пломбир с присыпкой из белого шоколада</td>
-		      	<td>1,5 кг х <span>300 руб.</span></td>
-		      	<td>450 руб.</td>
-		      </tr>
-		      <tr>
-		      	<td></td>
-		      	<td></td>
-		      	<td></td>
-		      	<td><b>Итого: 750 руб.<b></td>
-		      </tr>
-		    </table>
-		    <a href="#">Оформить заказ</a>
-		  </div>
+		    <a class="search" href="#"></a>
+		    <div class="hidden">
+		      <input type="text" name="search" placeholder="Что ищем?">
+		    </div>
+		    <a class="login" href="#">Вход</a>
+		    <div class="hidden">
+		      <form action="">
+		        <input type="email" name="login" placeholder="Электронная почта">
+		        <input type="password" name="password" placeholder="Введите пароль">
+		        <button class="button" type="submit">Войти</button>
+		      </form>
+		      <a href="#">Забыли пароль</a>
+		      <a href="#">Новая регистрация</a>
+		    </div>
+		    <a class="basket" href="#">Пусто</a>
+		    <div class="hidden">
+		      <table>
+		        <tr>
+		      	  <td><img src="img/basket-orange.jpg" width="33" height="33" alt="Мороженка"></td>
+		      	  <td>Пломбир с апельсиновым джемом</td>
+		      	  <td>1,5 кг х <span>200 руб.</span></td>
+		      	  <td>300 руб.</td>
+		        </tr>
+		        <tr>
+		      	  <td><img src="img/basket-strawberry.jpg" width="33" height="33" alt="Мороженка"></td>
+		      	  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+		          <td>1,5 кг х <span>300 руб.</span></td>
+		          <td>450 руб.</td>
+		        </tr>
+		        <tr>
+		          <td></td>
+		          <td></td>
+		          <td></td>
+		          <td><b>Итого: 750 руб.<b></td>
+		        </tr>
+		      </table>
+		      <a href="#">Оформить заказ</a>
+		    </div>
 		</div>
 		<p class="phone">
 	  	С 10 до 20, ежедневно<br>
@@ -145,102 +145,104 @@
       <!-- Список продуктов -->
       <div class="products">
 		<div class="product-item">		  
-		   <img class="ice-cream" src="img/orange.jpg" width="267" height="267" alt="Апельсиновое">
+		   <img src="img/orange.jpg" width="267" height="267" alt="Апельсиновое">
 		   <p><b>310 &#8381; </b>кг</p>
 		   <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 		   <!-- кнопка быстрого просмотра при наведении на продукт -->
-           <a class="quick-view" href="#">Быстрый просмотр</a>
+           <a class="button quick-view" href="#">Быстрый просмотр</a>
 		 </div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/coffee.jpg" width="267" height="267" alt="Кофейное с шоколадом">
+		  <img src="img/coffee.jpg" width="267" height="267" alt="Кофейное с шоколадом">
 		  <p><b>380 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="button uick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/strawberry.jpg" width="267" height="267" alt="Клубничное с белым шоколадом">
+		  <img src="img/strawberry.jpg" width="267" height="267" alt="Клубничное с белым шоколадом">
 		  <p><b>355 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class=" button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/cream-brule.jpg" width="267" height="267" alt="Крем-брюле с карамелью">
+		  <img src="img/cream-brule.jpg" width="267" height="267" alt="Крем-брюле с карамелью">
 		  <p><b>415 &#8381; </b>кг</p>
 		  <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/cowberry.jpg" width="267" height="267" alt="с брусничным джемом">
+		  <img src="img/cowberry.jpg" width="267" height="267" alt="с брусничным джемом">
 		  <p><b>325 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с брусничным джемом</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/billberry.jpg" width="267" height="267" alt="с цельными ягодами черники">
+		  <img src="img/billberry.jpg" width="267" height="267" alt="с цельными ягодами черники">
 		  <p><b>410 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-черничное с цельными ягодами черники</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/lemon.jpg" width="267" height="267" alt="Лимонное с карамельной присыпкой">
+		  <img src="img/lemon.jpg" width="267" height="267" alt="Лимонное с карамельной присыпкой">
 		  <p><b>375 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-лимнное с карамельной присыпкой</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/chocolate-chip.jpg" width="267" height="267" alt="С шоколадной стружкой">
+		  <img src="img/chocolate-chip.jpg" width="267" height="267" alt="С шоколадной стружкой">
 		  <p><b>320 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с шоколадной стружкой</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/vanilla.jpg" width="267" height="267" alt="Ванильное с кусочками шоколада">
+		  <img src="img/vanilla.jpg" width="267" height="267" alt="Ванильное с кусочками шоколада">
 		  <p><b>440 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-ванильное с кусочками шоколада</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/menthol.jpg" width="267" height="267" alt="С ментоловым сиропом">
+		  <img src="img/menthol.jpg" width="267" height="267" alt="С ментоловым сиропом">
 		  <p><b>435 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с ментоловым сиропом</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/black-chocolate.jpg" width="267" height="267" alt="С кусочками черного шоколада">
+		  <img src="img/black-chocolate.jpg" width="267" height="267" alt="С кусочками черного шоколада">
 		  <p><b>355 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с кусочками черного шоколада</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
-		  <img class="ice-cream" src="img/mint.jpg" width="267" height="267" alt="С мятным сиропом">
+		  <img src="img/mint.jpg" width="267" height="267" alt="С мятным сиропом">
 		  <p><b>420 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с мятным сиропом</a>
-		  <a class="quick-view" href="#">Быстрый просмотр</a>
+		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 	  </div>
 		<!-- переход по страницам -->
         <ul class="pages">
-        	<li>1</li>
-        	<li>2</li>
-        	<li>3</li>
-        	<li>4</li>
-        	<li>5</li>
+        	<li class="prev"><a href="#"></a></li>
+        	<li><a href="#">1</a></li>
+        	<li><a href="#">2</a></li>
+        	<li><a href="#">3</a></li>
+        	<li><a href="#">4</a></li>
+        	<li><a href="#">5</a></li>
+        	<li class="next"><a href="#"></a></li>
         </ul>
     </main>
     <!-- повдал сайта -->
     <footer class="main-footer">
 	  <div class="container clearfix">
 		<div class="footer-social">
-		  <a href="#" title="Твиттер"></a>
-		  <a href="#" title="Инстаграм"></a>
-		  <a href="#" title="Фейсбук"></a>
-		  <a href="#" title="Вконтакте"></a>
+		  <a class="tw" href="#" title="Твиттер"></a>
+		  <a class="ins" href="#" title="Инстаграм"></a>
+		  <a class="fb" href="#" title="Фейсбук"></a>
+		  <a class="vk" href="#" title="Вконтакте"></a>
 		</div>
 		<div class="footer-menu">
 		  <ul>
-		  	<li><a href="#">Для поставщиков</a></li>
-		  	<li><a href="#">О производсте</a></li>
+		  	<li class="active"><a href="#">Для поставщиков</a></li>
 		  	<li><a href="#">Наши документы</a></li>
+		  	<li><a href="#">О производсте</a></li>
 		  	<li><a href="#">Экологические стандарты</a></li>
 		  </ul>
 		</div>
