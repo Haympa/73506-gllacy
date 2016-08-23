@@ -208,7 +208,8 @@ body {
 
 .search,
 .login,
-.basket {
+.basket,
+.filled-basket {
 	display: inline-block;
 	position: relative;
 	height: 32px;
@@ -269,6 +270,27 @@ body {
 	height: 20px;
 	background: url("../img/basket.svg") no-repeat 50% 50%;
 }
+
+.filled-basket {
+	box-sizing: border-box;
+	width: 117px;
+	margin-right: 0;
+	background-color: #f7f6f3;
+	color: #323232;
+	text-align: left;
+	padding-left: 45px;
+}
+
+.filled-basket::before {
+	content: "";
+	position: absolute;
+	left: 16px;
+	top: 6px;
+	width: 22px;
+	height: 20px;
+	background: url("../img/filled-basket.png") no-repeat 50% 50%;
+}
+
 
 .phone {
 	font-family: "RobotoBold", "Arial", sans-serif;
@@ -467,6 +489,7 @@ body {
 }
 
 
+/* Главная страница, новостной блок + подписка */
 .news {
 	float: left;
 	width: 560px;
@@ -512,6 +535,8 @@ body {
 	padding-top: 30px;
 }
 
+
+/* Главная страница, контакты на карте */
 .contact {
 	box-sizing: border-box;
 	position: absolute;
@@ -559,6 +584,8 @@ body {
 	height: 442px;
 }
 
+
+/* Главная страница, футер */
 .main-footer {
 	margin-top: 19px;
 }
@@ -667,11 +694,37 @@ body {
 
 /* catalog.html */
 
+/* Хлебные крошки */
 .breadcrumbs {
 	width: 560px;
-	/*only for grid*/
-	outline: 1px solid yellow;
 }
+
+.breadcrumbs ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: "RobotoRegular", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	color: #ffffff;
+}
+
+.breadcrumbs a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.breadcrumbs li:not(:last-of-type) a::after {
+	content: "\bb";
+	margin: 0 8px;
+} 
 
 .filters {
 	width: 879px;
@@ -701,7 +754,7 @@ body {
 	width: 25px;
 	height: 26px;
 	color: #ffffff;
-	font-family: "RobotoMedium";
+	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 26px;
 	text-align: center;
@@ -730,3 +783,4 @@ body {
 	background-color: #ffffff;
 	color: #323232;
 }
+
