@@ -937,10 +937,6 @@ body h1 {
 	padding-left: 30px;
 }
 
-/*.filters input[type="checkbox"] + label:first-of-type {
-	margin-left: 30px;
-}*/
-
 /* сам чекбокс */
 .filters input[type="checkbox"] + label::before {
 	content: "";
@@ -959,13 +955,16 @@ body h1 {
 .filters input[type="checkbox"]:checked + label::after {
 	content: "";
 	position: absolute;
-	top: 5px;
+	/*top: 5px;
 	left: 4px;
 	width: 12px;
 	height: 10px;
-	background-color: black;
-
-	/*background: url("../img/checkbox-on.svg") no-repeat;*/
+	background-color: black;*/
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: url("../img/checkbox-on.svg") no-repeat;
 
 	/*background: url("../img/галка.png") no-repeat;*/
 } 
