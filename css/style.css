@@ -50,12 +50,19 @@ body {
 	background-color: #849d8f;
 	font-size: 14px;
 	line-height: 16px;
-	color: #cfffcc;
+	color: #ffffff;
 	word-wrap: break-word;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 
 	/*background: #000000 url("../img/gllacy-index-1200.jpg") no-repeat 50%;
     background-size: 1200px auto;*/
+}
+
+body h1 {
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
 }
 
 #map {
@@ -119,12 +126,28 @@ body {
 
 /* ссылки главного меню */
 .main-navigation > ul> li > a {
+	position: relative;
 	display: block;
 	padding: 7px 14px;
 	font-size: 16px;
 	line-height: 18px;
 	color: #ffffff;
 	text-decoration: none;
+}
+
+/* подчеркивание */
+.main-navigation > ul> li::after {
+	content: "";
+	position: absolute;
+	bottom: 7px;
+	left: 14px;
+	right: 14px;
+	height: 1px;
+	background-color: #b0c0b7;
+}
+
+.main-navigation > ul> li:hover::after {
+	display: none;
 }
 
 /* изменение стиля при наведении на пункт главного меню */
@@ -203,7 +226,7 @@ body {
 /* Скрываем элементы, появляющиеся при наведении или
 нажатии в блоке user-block */
 .user-block .hidden {
-	display: none;
+	/*display: none;*/
 }
 
 .search,
@@ -235,6 +258,21 @@ body {
 	background: #9db1a5 url("../img/search.svg") no-repeat 50% 50%;
 }
 
+.search + .hidden {
+	box-sizing: border-box;
+	width: 341px;
+	border-radius: 6px;
+	background-color: #f8f7f4;
+	padding: 20px 15px;
+}
+
+.search + .hidden input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px;
+	background-color: #ffffff;
+}
+
 .login {
 	box-sizing: border-box;
 	width: 92px;
@@ -250,6 +288,27 @@ body {
 	width: 20px;
 	height: 19px;
 	background: url("../img/login.svg") no-repeat 50% 50%;
+}
+
+.login + .hidden {
+	box-sizing: border-box;
+	width: 277px;
+	border-radius: 6px;
+	background-color: #f8f7f4;
+	padding: 20px 20px;
+}
+
+.login + .hidden input {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 15px;
+	/*border-radius: 6px;*/
+	background-color: #ffffff;
+}
+
+.login + .hidden a {
+	display: block;
 }
 
 .basket {
@@ -269,6 +328,15 @@ body {
 	width: 22px;
 	height: 20px;
 	background: url("../img/basket.svg") no-repeat 50% 50%;
+}
+
+.basket + .hidden {
+	box-sizing: border-box;
+	width: 540px;
+	border-radius: 6px;
+	background-color: #f8f7f4;
+	padding: 20px 20px;
+	color: #323232;
 }
 
 .filled-basket {
@@ -386,9 +454,8 @@ body {
 .product-item {
 	display: inline-block;
 	position: relative;
-	width: 267px;
+	width: 293px;
 	min-height: 322px;
-	margin-right: 26px;
 	margin-bottom: 40px;
 	font-size: 14px;
 	vertical-align: top;
@@ -397,7 +464,11 @@ body {
 }
 
 .product-item:nth-child(4n) {
-	margin-right: 0;
+	margin-right: -13px;
+}
+
+.product-item:nth-child(4n-3) {
+	margin-left: -13px;
 }
 
 /* Убираем товарам нижней строки нижний внешний оступ */
@@ -418,6 +489,7 @@ body {
 .product-item p {
 	position: absolute;
 	top: 195px;
+	left: 13px;
 	font-size: 30px;
 }
 
@@ -431,8 +503,8 @@ body {
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-}
 
+}
 
 /* Главная страница, описание Магазин Глейси */
 .description {
@@ -707,12 +779,24 @@ body {
 }
 
 .breadcrumbs li {
+	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
 	color: #ffffff;
+}
+
+/* подчеркивание */
+.breadcrumbs li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 22px;
+	left: 0;
+	height: 1px;
+	background-color: #aebeb5;
 }
 
 .breadcrumbs a {
@@ -729,17 +813,145 @@ body {
 .filters {
 	width: 879px;
 	margin-bottom: 35px;
-	/*only for grid*/
-	outline: 1px solid yellow;
+	font-family: "RobotoMedium", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 18px;
 }
 
+.filters > div {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.filters .filter-title {
+	margin-top: 0;
+	margin-bottom: 5px;
+	padding-left: 15px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+
+.filters .filter-bg {
+	padding: 8px 16px;
+	border-radius: 18px;
+	background-color: #b0c0b7;
+}
+
+.filters select {
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+}
+
+.filters select:active {
+	color: #323232;
+}
+
+/* Свои радиокнопки */
+.filters input[type="radio"] {
+	display: none;
+}
+
+.filters input[type="radio"] + label {
+	display: inline-block;
+	line-height: baseline;
+	position: relative;
+	margin-left: 50px;
+}
+
+.filters input[type="radio"] + label:first-of-type {
+	margin-left: 30px;
+}
+
+/* сама радиокнопка */
+.filters input[type="radio"] + label::before {
+	content: "";
+	/*box-sizing: border-box;*/
+	position: absolute;
+	top: -1px;
+	left: -30px;
+	width: 20px;
+	height: 20px;
+	background: url("../img/radio-off.svg") no-repeat;
+}
+
+/* выбранная радиокнопка */
+.filters input[type="radio"]:checked + label::after {
+	content: "";
+	position: absolute;
+	top: -1px;
+	left: -30px;
+	width: 20px;
+	height: 20px;
+	background: url("../img/radio-on.svg") no-repeat;
+} 
+
+/* Свои чекбоксы */
+.filters input[type="checkbox"] {
+	display: none;
+}
+
+.filters input[type="checkbox"] + label {
+	display: inline-block;
+	line-height: baseline;
+	position: relative;
+	margin-right: 20px;
+	padding-left: 30px;
+}
+
+/*.filters input[type="checkbox"] + label:first-of-type {
+	margin-left: 30px;
+}*/
+
+/* сам чекбокс */
+.filters input[type="checkbox"] + label::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+/*	box-sizing: border-box;
+	border-radius: 3px;
+	border: 1px solid #ffffff;*/
+	background: url("../img/checkbox-off.svg") no-repeat;
+}
+
+/* выбранный чекбокс */
+.filters input[type="checkbox"]:checked + label::after {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 4px;
+	width: 12px;
+	height: 10px;
+	background-color: black;
+
+	/*background: url("../img/checkbox-on.svg") no-repeat;*/
+
+	/*background: url("../img/галка.png") no-repeat;*/
+} 
+
+.filters > div:last-child {
+	vertical-align: bottom;
+}
+
+.filters button {
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+}
+
+
+/* Пагинатор */
 .pages {
 	margin-bottom: 30px;
-
 	padding: 0;
 	list-style: none;
 	font-size: 0;
-
 	text-align: right;
 }
 
@@ -770,13 +982,14 @@ body {
 	background: url("../img/next.png") no-repeat 50% 50%;
 }
 
-.pages li:nth-child(2) a {
+.pages .active a {
 	background-color: #ffffff;
 	color: #323232;
 }
 
 .pages li:hover:not(:first-child):not(:last-child) a {
 	background-color: #9db1a5;
+	color: #ffffff;
 }
 
 .pages li:active:not(:first-child):not(:last-child) a {
@@ -784,3 +997,19 @@ body {
 	color: #323232;
 }
 
+.product-item:hover a::after {
+	content: "Быстрый просмотр";
+	display: block;
+	width: 193px;
+	height: 44px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	background-color: #e84e37;
+	border-radius: 22px;
+	line-height: 44px;
+}
+
+.product-item:hover {
+	background-color: #9db1a5;
+}

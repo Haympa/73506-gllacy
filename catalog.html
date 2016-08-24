@@ -38,8 +38,9 @@
 		        <input type="password" name="password" placeholder="Введите пароль">
 		        <button class="button" type="submit">Войти</button>
 		      </form>
-		      <a href="#">Забыли пароль</a>
-		      <a href="#">Новая регистрация</a>
+		      <a href="#">Забыли пароль?</a>
+		      <a href="#">Новая регистрация?</a>
+		      
 		    </div>
 		    <a class="filled-basket" href="#">2 товара</a>
 		    <div class="hidden">
@@ -86,142 +87,123 @@
       <!-- Фильтры -->
       <form class="filters" action="">
         <div>
-      	  <span class="filter-title">Сортировка:</span>
+      	  <p class="filter-title">Сортировка:</p>
+      	  <div class="filter-bg">
       	  <select name="sorting">
       	    <option value="popular">по популярности</option>
       	    <option value="ascending">сначала недорогие</option>
       	    <option value="descending">сначала дорогие</option>
       	    <option value="fat">по жирности</option>
       	  </select>
+      	  </div>
       	</div>
       	<div>
-      	  <span class="filter-title">Цена:</span>
+      	  <p class="filter-title">Цена:</p>
+      	  <div class="filter-bg">
       	  <input type="range" min="0" max="1000" step="100" value="100">
+      	  </div>
       	</div>
       	<div>
-      	  <span class="filter-title">Жирность:</span>
-      	  <label>
-      	    <input type="radio" name="fatness" value="0">
-      	    0%
-      	  </label>
-          <label>
-      	    <input type="radio" name="fatness" value="10" checked>
-      	    до 10%
-      	  </label>
-      	  <label>
-      	    <input type="radio" name="fatness" value="30">
-      	    до 30%
-      	  </label>
-      	  <label>
-      	    <input type="radio" name="fatness" value="more"> 
-      	    выше 30%  
-      	  </label>
+      	  <p class="filter-title">Жирность:</p>
+      	  <div class="filter-bg">
+      	    <input type="radio" id="fat0" name="fatness" value="0">
+      	    <label for id="fat0">0%</label>
+      	    <input type="radio" id="fat10" name="fatness" value="10" checked>
+            <label for id="fat10">до 10%</label>
+            <input type="radio" id="fat30" name="fatness" value="30">
+      	    <label for id="fat30">до 30%</label>
+			<input type="radio" id="fat30+" name="fatness" value="more"> 
+      	    <label for id="fat30+">выше 30%</label>
+      	  </div>
       	</div>
       	<div>
-      	  <span class="filter-title">Наполнители:</span>
-      	  <label>
-      	    <input type="checkbox" name="chocolate" checked>
-            шоколадные
-          </label>
-      	  <label>
-      	    <input type="checkbox" name="shugar" checked>
-            сахарные присыпки
-		  </label>
-      	  <label>
-      	    <input type="checkbox" name="fruit">
-            фрукты
-          </label>
-      	  <label>
-      	    <input type="checkbox" name="syrup">
-            сиропы
-          </label>
-      	  <label>
-      	    <input type="checkbox" name="jam">
-            джемы
-          </label>
+      	  <p class="filter-title">Наполнители:</p>
+      	  <div class="filter-bg">
+	      	  <input type="checkbox" id="cho" name="chocolate" checked>
+	      	  <label for id="cho">шоколадные</label>
+	      	  <input type="checkbox" id="shu" name="shugar" checked>
+	      	  <label for id="shu">сахарные присыпки</label>
+			  <input type="checkbox" id="fru" name="fruit">
+	      	  <label for id="fru">фрукты </label>
+	      	  <input type="checkbox" id="syr" name="syrup">
+	      	  <label for id="syr">сиропы</label>
+	      	  <input type="checkbox" id="jam" name="jam">
+	      	  <label for id="jam">джемы</label>
+          </div>
         </div>
-        <button type="submit">Применить</button>
+        <div>
+          <div class="filter-bg">
+            <button type="submit">Применить</button>
+          </div>
+        </div>
       </form>
       <!-- Список продуктов -->
       <div class="products">
 		<div class="product-item">		  
 		   <img src="img/orange.jpg" width="267" height="267" alt="Апельсиновое">
 		   <p><b>310 &#8381; </b>кг</p>
-		   <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-		   <!-- кнопка быстрого просмотра при наведении на продукт -->
-           <a class="button quick-view" href="#">Быстрый просмотр</a>
+		   <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>      
 		 </div>
 		<div class="product-item">		  	
 		  <img src="img/coffee.jpg" width="267" height="267" alt="Кофейное с шоколадом">
 		  <p><b>380 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-          <a class="button uick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/strawberry.jpg" width="267" height="267" alt="Клубничное с белым шоколадом">
 		  <p><b>355 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-		  <a class=" button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/cream-brule.jpg" width="267" height="267" alt="Крем-брюле с карамелью">
 		  <p><b>415 &#8381; </b>кг</p>
 		  <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/cowberry.jpg" width="267" height="267" alt="с брусничным джемом">
 		  <p><b>325 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с брусничным джемом</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/billberry.jpg" width="267" height="267" alt="с цельными ягодами черники">
 		  <p><b>410 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-черничное с цельными ягодами черники</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/lemon.jpg" width="267" height="267" alt="Лимонное с карамельной присыпкой">
 		  <p><b>375 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-лимнное с карамельной присыпкой</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/chocolate-chip.jpg" width="267" height="267" alt="С шоколадной стружкой">
 		  <p><b>320 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с шоколадной стружкой</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/vanilla.jpg" width="267" height="267" alt="Ванильное с кусочками шоколада">
 		  <p><b>440 &#8381; </b>кг</p>
 		  <a href="#">Сливочно-ванильное с кусочками шоколада</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/menthol.jpg" width="267" height="267" alt="С ментоловым сиропом">
 		  <p><b>435 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с ментоловым сиропом</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/black-chocolate.jpg" width="267" height="267" alt="С кусочками черного шоколада">
 		  <p><b>355 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с кусочками черного шоколада</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 		<div class="product-item">		  	
 		  <img src="img/mint.jpg" width="267" height="267" alt="С мятным сиропом">
 		  <p><b>420 &#8381; </b>кг</p>
 		  <a href="#">Сливочное с мятным сиропом</a>
-		  <a class="button quick-view" href="#">Быстрый просмотр</a>
 		</div>
 	  </div>
 		<!-- переход по страницам -->
         <ul class="pages">
         	<li class="prev"><a href="#"></a></li>
-        	<li><a href="#">1</a></li>
+        	<li class="active"><a href="#">1</a></li>
         	<li><a href="#">2</a></li>
         	<li><a href="#">3</a></li>
         	<li><a href="#">4</a></li>
