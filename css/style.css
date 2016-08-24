@@ -220,7 +220,8 @@ body h1 {
 /* Скрываем элементы, появляющиеся при наведении или
 нажатии в блоке user-block */
 .user-block .hidden {
-	/*display: none;*/
+	display: none;
+	font-size: 14px;
 }
 
 .search,
@@ -241,15 +242,19 @@ body h1 {
 	line-height: 32px;
 }
 
-.hidden {
-	font-size: 14px;
-}
-
 .search{
 	margin-left: 6px;
 	width: 32px;
 	border-radius: 50%;
 	background: #9db1a5 url("../img/search.svg") no-repeat 50% 50%;
+}
+
+.search:hover {
+	background: #9db1a5 url("../img/search-focus.png") no-repeat 50% 50%;
+}
+
+.search:hover + .hidden {
+	display: block;
 }
 
 .search + .hidden {
@@ -274,6 +279,11 @@ body h1 {
 	background-color: #9db1a5;
 }
 
+.login:hover {
+	background-color: #f8f7f4;
+	color: #323232;
+}
+
 .login::before {
 	content: "";
 	position: absolute;
@@ -282,6 +292,14 @@ body h1 {
 	width: 20px;
 	height: 19px;
 	background: url("../img/login.svg") no-repeat 50% 50%;
+}
+
+.login:hover::before {
+	background: url("../img/login-focus.svg") no-repeat 50% 50%;
+}
+
+.login:hover + .hidden {
+	display: block;
 }
 
 .login + .hidden {
@@ -337,6 +355,10 @@ body h1 {
 	background-color: #f8f7f4;
 	padding: 20px 20px;
 	color: #323232;
+}
+
+.filled-basket:hover + .hidden {
+	display: block;
 }
 
 .filled-basket {
