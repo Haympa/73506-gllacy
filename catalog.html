@@ -10,12 +10,11 @@
     <!-- Шапка сайта -->
     <header class="main-header">
 	  <div class="container">
-		<a href="index.html"><img class="logo" src="img/logo.svg" width="154" height="64 alt="Лого"></a>
-		<div class="main-navigation">
+		<a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64 alt="Лого"></a>
+				<nav class="main-navigation">
 		  <ul>
-		    <li><a href="#">Каталог</a>
+		    <li><a href="catalog.html">Каталог</a>
 		      <ul class="submenu">
-
 		      	<li><a href="#">Новинки</a></li>
 		      	<li><a href="#">Сливочное</a></li>
 		      	<li><a href="#">Щербеты</a></li>
@@ -26,24 +25,28 @@
 			<li><a href="#">Доставка и оплата</a></li>
 			<li><a href="#">О компании</a></li>
 		  </ul>
-		</div>
+		</nav>
 		<div class="user-block">
-		    <a class="search" href="#"></a>
+		  <div class="search">
+		    <a href="#"></a>
 		    <div class="hidden">
 		      <input type="text" name="search" placeholder="Что ищем?">
 		    </div>
-		    <a class="login" href="#">Вход</a>
+		  </div>
+		  <div class="login">
+		    <a href="#">Вход</a>
 		    <div class="hidden">
 		      <form action="">
 		        <input type="email" name="login" placeholder="Электронная почта">
-		        <input type="password" name="password" placeholder="Введите пароль">
+		        <input type="password" name="password" placeholder="Пароль">
 		        <button class="button" type="submit">Войти</button>
 		      </form>
 		      <a href="#">Забыли пароль?</a>
 		      <a href="#">Новая регистрация?</a>
-		      
 		    </div>
-		    <a class="filled-basket" href="#">2 товара</a>
+		  </div>
+		  <div class="filled-basket">
+		    <a href="#">2 товара</a>
 		    <div class="hidden">
 		      <table>
 		        <tr>
@@ -62,11 +65,12 @@
 		          <td></td>
 		          <td></td>
 		          <td></td>
-		          <td><b>Итого: 750 руб.<b></td>
+		          <td><b>Итого: 750 руб.</b></td>
 		        </tr>
 		      </table>
 		      <a href="#">Оформить заказ</a>
 		    </div>
+		  </div>
 		</div>
 		<p class="phone">
 	  	С 10 до 20, ежедневно<br>
@@ -222,7 +226,7 @@
 		  <a class="vk" href="#" title="Вконтакте"></a>
 		</div>
 		<div class="footer-menu">
-		  <ul>
+		  <ul class="clearfix">
 		  	<li class="active"><a href="#">Для поставщиков</a></li>
 		  	<li><a href="#">Наши документы</a></li>
 		  	<li><a href="#">О производсте</a></li>
