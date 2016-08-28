@@ -86,6 +86,7 @@ body h1 {
 }
 
 .container {
+	position: relative; /* для фидбека */
 	width: 1200px;
 	padding: 0 27px;
 	margin: 0 auto;
@@ -238,6 +239,25 @@ body h1 {
 	background-color: #f6b5a5;
 }
 
+.button {
+	display: inline-block;
+	border-radius: 22px;
+	background: linear-gradient(to top, #e74a35, #f26843);
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+.button:hover {
+	background: linear-gradient(to top, #ec6f5e, #f58669);
+}
+
+.button:active {
+	background: linear-gradient(to bottom, #e74a35, #f26843);
+	box-shadow: inset 0 2px 2px 0 #942718;
+}
+
 /* Оформление блока пользователя: поиск, вход, корзина */
 .user-block {
 	position: relative;
@@ -270,20 +290,21 @@ body h1 {
 .filled-basket {
 	display: inline-block;
 	position: relative;
-	height: 32px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	margin-top: 23px;
 	margin-right: 10px;
 	vertical-align: middle;
 	border-radius: 15px;
 	color: #ffffff;
 	font-size: 14px;
-	line-height: 32px;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .search{
 	margin-left: 6px;
 	width: 32px;
+	height: 32px;
 	border-radius: 50%;
 	background: #9db1a5 url("../img/search.svg") no-repeat 50% 50%;
 }
@@ -357,8 +378,6 @@ body h1 {
 }
 
 .login .hidden {
-	/*display: block;*/
-
 	width: 277px;
 	border-radius: 6px;
 	background-color: #f8f7f4;
@@ -373,7 +392,9 @@ body h1 {
 }
 
 .login button {
+	float: left;
 	border: none;
+	width: 100px;
 	padding: 13px 20px;
 	border-radius: 25px;
 	font-family: "RobotoBold", "Arial", sans-serif;
@@ -383,20 +404,18 @@ body h1 {
 	box-shadow: 0 1px 2px 0 #ac1000;
 }
 
-.login .hidden a {
-	position: relative;
-	display: block;
-	text-decoration: none;
-	color: #323232;
+.login .hidden .link {
+	width: 126px;
+	float: right;
 }
 
-/*.login .hidden a::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	height: 1px;
-	background-color: rgba(248, 247, 244, 0.3);
-}*/
+.login .hidden .link a {
+	margin-top: 4px;
+	font-family: "RobotoRegular", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	color: #323232;
+}
 
 
 .login .hidden a:hover,
@@ -482,6 +501,62 @@ body h1 {
 	background-color: transparent;
 }
 
+.filled-basket table {
+	border-bottom: 1px solid #cacac7;
+} 
+
+.filled-basket td {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+	vertical-align: middle;
+	font-family: "RobotoRegular", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	color: #323232;
+}
+
+.filled-basket .hidden td:first-of-type {
+	position: relative;
+	padding-left: 25px;
+	padding-right: 0;
+	vertical-align: top;
+}
+
+.filled-basket .hidden td:first-of-type::before {
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 0;
+	width: 11px;
+	height: 11px;
+	background: url("../img/basket-x.png") no-repeat;
+}
+
+.filled-basket .hidden td:nth-child(2) {
+	width: 245px;
+}
+
+.filled-basket .hidden td span {
+	color: #999999;
+}
+
+.filled-basket .hidden p {
+	text-align: right;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	color: #333333;
+}
+
+.filled-basket .hidden .button {
+	float: right;
+	padding: 10px 15px;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	color: #fefefe;
+}
+
+
 .phone {
 	font-family: "RobotoBold", "Arial", sans-serif;
 	font-size: 14px;
@@ -494,26 +569,6 @@ body h1 {
 .phone b {
 	font-size: 22px;
 	line-height: 24px;
-}
-
-.button {
-	display: inline-block;
-	width: 130px;
-	border-radius: 22px;
-	background: linear-gradient(to top, #e74a35, #f26843);
-	color: #ffffff;
-	text-align: center;
-	text-decoration: none;
-}
-
-
-.button:hover {
-	background: linear-gradient(to top, #ec6f5e, #f58669);
-}
-
-.button:active {
-	background: linear-gradient(to bottom, #e74a35, #f26843);
-	box-shadow: inset 0 2px 2px 0 #942718;
 }
 
 .slider {
@@ -637,22 +692,43 @@ body h1 {
 	color: #ffbc9e;
 }
 
-/*.product-item:hover a::after {
-	content: "Быстрый просмотр";
-	display: block;
-	width: 193px;
-	height: 44px;
-	margin: 0 auto;
-	margin-bottom: 15px;
-	margin-top: 20px;
-	background-color: #e84e37;
-	border-radius: 22px;
-	line-height: 44px;
+.product-item .button {
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	padding: 10px 17px;
 }
 
-.product-item:hover {
-	background-color: #9db1a5;
-}*/
+.product-item::before {
+	content: "";
+	display: none;
+	position: absolute;
+	left: -13px;
+	top: -6px;
+	width: 110%;
+	height: 125%;
+  	border-radius: 5px;
+  	background-color: rgb(248, 247, 244);
+  	opacity: 0.3;
+  	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
+}
+
+.product-item:hover::before {
+	display: block;
+}
+
+
+.product-item .view {
+	display: none;
+	position: absolute;
+	bottom: -55px;
+	left: 31px;
+	width: 205px;
+}
+
+.product-item:hover .view {
+	display: block;
+}
 
 /* Главная страница, описание Магазин Глейси */
 .description {
@@ -764,6 +840,7 @@ body h1 {
 }
 
 .subs input {
+	width: 363px;
 	margin-right: 11px;
 	border: none;
 	border: 1px solid #d3d3d2;
@@ -815,13 +892,60 @@ body h1 {
 	box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 }
 
-/* Скрываем всплывающее окно обратной связи */
+/* Скрытое всплывающее окно обратной связи */
 .feedback {
 	display: none;
-	width: 477px;
-	height: 442px;
+	position: absolute;
+	top: 215px;
+	left: 361px;
+	right: 361px;
+	width: 478px;
+	background-color: #f8f7f4;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 14px;
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
+.feedback * {
+	margin-bottom: 20px;
+}
+
+.feedback h2 {
+	font-family: "RobotoMedium", "Arial", sans-serif;
+	font-size: 24px;
+	line-height: 1.16em;
+	color: #323232;
+}
+
+.feedback input {
+	width: 266px;
+	padding: 15px;
+	border-radius: 6px;
+	border: 1px solid #d3d3d2;
+	color: #999999;
+}
+
+.feedback textarea {
+	width: 427px;
+	padding: 15px;
+	border-radius: 6px;
+	border: 1px solid #d3d3d2;
+	color: #999999;
+}
+
+.feedback button {
+	float: right;
+	border: none;
+	width: 138px;
+	padding: 10px 24px;
+	border-radius: 25px;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	color: #fefefe;
+	box-shadow: 0 1px 2px 0 #ac1000;
+}
 
 /* Главная страница, футер */
 .main-footer {
@@ -1073,7 +1197,6 @@ body h1 {
 /* сама радиокнопка */
 .filters input[type="radio"] + label::before {
 	content: "";
-	/**/
 	position: absolute;
 	top: -1px;
 	left: -30px;
@@ -1092,6 +1215,15 @@ body h1 {
 	height: 20px;
 	background: url("../img/radio-on.svg") no-repeat;
 } 
+
+/* наведение на радиокнопки */
+.filters input[type="radio"] + label:hover::before{
+	background: url("../img/radio-hover-off.svg") no-repeat;
+}
+
+.filters input[type="radio"]:checked + label:hover::after{
+	background: url("../img/radio-hover-on.svg") no-repeat;
+}
 
 /* Свои чекбоксы */
 .filters input[type="checkbox"] {
@@ -1127,6 +1259,15 @@ body h1 {
 	height: 20px;
 	background: url("../img/checkbox-on.svg") no-repeat;
 } 
+
+/* наведение на чекбоксы */
+.filters input[type="checkbox"] + label:hover::before{
+	background: url("../img/checkbox-hover-off.svg") no-repeat;
+}
+
+.filters input[type="checkbox"]:checked + label:hover::after{
+	background: url("../img/checkbox-hover-on.svg") no-repeat;
+}
 
 .filters > div:last-child {
 	vertical-align: bottom;
@@ -1200,4 +1341,19 @@ body h1 {
 .pages li:active:not(:first-child):not(:last-child) a {
 	background-color: #ffffff;
 	color: #323232;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+	border: 2px solid #c7c6c5;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+	outline: 2px solid #8fbdec;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
 }
