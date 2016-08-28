@@ -32,9 +32,15 @@
     </script>
   </head>
   <body>
+
+    <input type="radio" id="switch1" name="switch" checked>
+    <input type="radio" id="switch2" name="switch">
+    <input type="radio" id="switch3" name="switch">
+
+    <div class="wrapper">
+    <div class="container"> <!-- обертка для контента -->
     <!-- Шапка сайта -->
 	<header class="main-header">
-	  <div class="container">
 		<a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64 alt="Лого"></a>
 		<nav class="main-navigation">
 		  <ul>
@@ -103,21 +109,28 @@
 	  	С 10 до 20, ежедневно<br>
 	  	<b>8 812 450-25-25</b>
 	  </p>
-	  </div>
 	</header>
     <!-- Основное содержимое -->
-	<main class="container">
-	  
+	<main>	  
 	  <!-- Слайдер с рожками -->
       <div class="slider">
-        <img class="cone" src="img/Cones1.png" width="647" height="584" alt="Супер-мороженка">
-        <p>Крем-брюле и пломбир с малиновым джемом</p>
-      	<a href="#" class="button">Давайте оба!</a>  
-      	<ul>
-      	  <li></li>
-      	  <li></li>
-      	  <li></li>
-      	</ul>    	
+      	<div class="slide" id="slide1">
+	      <p>Крем-брюле и пломбир с малиновым джемом</p>
+	      <a href="#" class="button">Давайте оба!</a>  
+        </div>
+        <div class="slide" id="slide2">
+	      <p>Шоколадный пломбир и лимонный сорбет</p>
+	      <a href="#" class="button">Давайте оба!</a>  
+        </div>
+        <div class="slide" id="slide3">
+	      <p>Пломбир с помадкой и клубничный щербет</p>
+	      <a href="#" class="button">Давайте оба!</a>  
+        </div>
+        <div class="switch">
+        	<label for="switch1"></label>
+        	<label for="switch2"></label>
+        	<label for="switch3"></label>
+        </div>
       </div>
       <!-- Банеры -->
 	  <div class="banners clearfix">	  
@@ -200,8 +213,7 @@
       </div> 	  
     </main>
 	<!-- Подвал сайта -->
-	<footer class="main-footer">
-	  <div class="container clearfix">
+	<footer class="main-footer clearfix">
 		<div class="footer-social">
 		  <a class="tw" href="#" title="Твиттер"></a>
 		  <a class="ins" href="#" title="Инстаграм"></a>
@@ -220,7 +232,11 @@
 		  <img src="img/logo-html.svg" width="108" height="38" alt="HTML Academy">
 		  <p>Сделано в <a href="#">HTML Academy</a> &copy; 2016</p>
 		</div>
-	  </div>
 	</footer>
+
+	  </div>
+
+	</div>
+
   </body>
 </html>

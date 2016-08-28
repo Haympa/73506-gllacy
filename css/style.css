@@ -39,19 +39,11 @@
     font-weight: normal;
 }
 
-html,
-body {
-  min-width: 1200px;
-  margin: 0;
-  padding: 0;
-}
-
 *, *::after, *::before {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #849d8f;
 	font-size: 14px;
 	line-height: 16px;
 	color: #ffffff;
@@ -66,6 +58,23 @@ body h1 {
 	font-size: 35px;
 	line-height: 41px;
 	color: #ffffff;
+}
+
+.wrapper {
+	min-width: 1200px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.container {
+	position: relative; /* для фидбека */
+	width: 1200px;
+	padding: 0 27px;
+	margin: 0 auto;
+}
+
+input[id^="switch"] {
+	display: none;
 }
 
 #map {
@@ -83,13 +92,6 @@ body h1 {
 
 .main-header {
 	margin-bottom: 10px;
-}
-
-.container {
-	position: relative; /* для фидбека */
-	width: 1200px;
-	padding: 0 27px;
-	margin: 0 auto;
 }
 
 .logo {
@@ -242,20 +244,21 @@ body h1 {
 .button {
 	display: inline-block;
 	border-radius: 22px;
-	background: linear-gradient(to top, #e74a35, #f26843);
+	background: linear-gradient(to top, #ca3824, #f26843);
+	box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
 	color: #ffffff;
 	text-align: center;
 	text-decoration: none;
 }
 
-
 .button:hover {
 	background: linear-gradient(to top, #ec6f5e, #f58669);
+	box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .button:active {
 	background: linear-gradient(to bottom, #e74a35, #f26843);
-	box-shadow: inset 0 2px 2px 0 #942718;
+	box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 1);
 }
 
 /* Оформление блока пользователя: поиск, вход, корзина */
@@ -572,11 +575,92 @@ body h1 {
 }
 
 .slider {
-	min-height: 526px;
-	margin-bottom: 38px;
-	/* only for grid*/
-	outline: 1px solid yellow;
+	position: relative;
+	margin-bottom: 30px;
+	padding-top: 270px;
+	text-align: center;
 }
+
+.slider .slide {
+	display: none;
+}
+
+.slider p {
+	margin: 0 235px;
+	margin-bottom: 32px;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 60px;
+	line-height: 1em;
+}
+
+.slider .button {
+	padding: 10px 40px;
+	border-radius: 30px;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 32px;
+	line-height: 1.38em;
+	box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+}
+
+.slider .button:hover {
+	background: linear-gradient (to top, #e74a35, #f26843);
+	box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 1);
+}
+
+.slider .button:active {
+	background: linear-gradient (to bottom, #e74a35, #f26843);
+	box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 1);
+}
+
+.slider .switch {
+	position: absolute;
+	bottom: 25px;
+	font-size: 0;
+}
+
+.slider .switch label {
+	display: inline-block;
+	vertical-align: top;
+	width: 21px;
+	height: 21px;
+	margin-right: 8px;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	font-size: 14px;
+	background-color: transparent;
+}
+
+/* текст в зависимости от выбранного переключателя */
+#switch1:checked ~ .wrapper #slide1,
+#switch2:checked ~ .wrapper #slide2,
+#switch3:checked ~ .wrapper #slide3 {
+	display: block;
+}
+
+/* выделение выбранного переключателя */
+#switch1:checked ~ .wrapper label[for="switch1"],
+#switch2:checked ~ .wrapper label[for="switch2"],
+#switch3:checked ~ .wrapper label[for="switch3"] {
+	background-color: #ffffff;
+}
+
+/* загрузка фона в зависимости от выбранного переключателя */
+#switch1:checked ~ .wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/cones1.png");	
+}
+
+#switch2:checked ~ .wrapper {
+	background-color: #8996a6;
+	background-image: url("../img/cones2.png");	
+}
+
+#switch3:checked ~ .wrapper {
+	background-color: #9d8b84;
+	background-image: url("../img/cones3.png");	
+}
+
+
 
 
 /* Главная страница, баннеры */
@@ -618,7 +702,6 @@ body h1 {
 	padding: 0 22px;
 	font-size: 18px;
 	line-height: 45px;
-	box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 }
 
 .banner-item:nth-child(1) {
@@ -955,6 +1038,7 @@ body h1 {
 .footer-social {
 	float: left;
 	width: 267px;
+	margin-top: 15px;
 	min-height: 85px;
 	margin-right: 26px;
 }
@@ -1000,6 +1084,7 @@ body h1 {
 .footer-menu {
 	float: left;
 	width: 560px;
+	margin-top: 15px;
 	margin-right: 26px;
 	min-height: 85px;
 	font-family: "RobotoRegular", "Arial", sans-serif;
