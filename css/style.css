@@ -48,7 +48,7 @@ body {
 	line-height: 16px;
 	color: #ffffff;
 	font-family: "RobotoRegular", "Arial", sans-serif;
-
+	background-color: #849d8f; 
 	/*background: #000000 url("../img/gllacy-index-1200.jpg") no-repeat 50%;
     background-size: 1200px auto;*/
 }
@@ -64,6 +64,28 @@ body h1 {
 	min-width: 1200px;
 	background-repeat: no-repeat;
 	background-position: top center;
+
+	/*transition: background-image 0.5s ease, background-color 0.5s ease;*/
+}
+
+/* Псевдоэлементы с изображениями нужны только 
+для предзагрузки картинок, чтобы они уже были 
+в кеше в момент переключения слайдов и сразу 
+отображались */
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.wrapper::before {
+  background-image: url("../img/cones2.png");
+}
+
+.wrapper::after {
+  background-image: url("../img/cones3.png");
 }
 
 .container {
@@ -141,7 +163,7 @@ input[id^="switch"] {
 	left: 14px;
 	right: 14px;
 	height: 1px;
-	background-color: #b0c0b7;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-navigation > ul> li:hover::after {
@@ -1199,7 +1221,7 @@ input[id^="switch"] {
 	right: 22px;
 	left: 0;
 	height: 1px;
-	background-color: #aebeb5;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .breadcrumbs a {
