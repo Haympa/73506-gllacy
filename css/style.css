@@ -145,6 +145,11 @@ input[id^="switch"] {
   text-decoration: none;
 }
 
+.main-navigation .active > a {
+  background-color: #d07058;
+  border-radius: 15px;
+}
+
 /* подчеркивание */
 .main-navigation > ul > li::after {
   content: "";
@@ -154,6 +159,10 @@ input[id^="switch"] {
   right: 14px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-navigation > ul > li.active::after {
+  display: none;
 }
 
 .main-navigation > ul > li:hover::after {
@@ -1242,8 +1251,8 @@ form button {
   color: #ffffff;
 }
 
-.breadcrumbs a:hover,
-.breadcrumbs a:active {
+.breadcrumbs a[href]:hover,
+.breadcrumbs a[href]:active {
   color: #ffbc9e;
 }
 
@@ -1253,7 +1262,7 @@ form button {
 }
 
 /* кавычки между словами */
-.breadcrumbs li:not(:last-of-type) a::after {
+.breadcrumbs li/*:not(:last-of-type)*/ a[href]::after {
   content: "\bb";
   margin: 0 8px;
   color: #ffffff;
@@ -1263,7 +1272,7 @@ form button {
   margin-bottom: 35px;
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.125em;
 }
 
 .filters > div {
@@ -1282,15 +1291,23 @@ form button {
 }
 
 .filters .filter-bg {
-  padding: 8px 16px;
+  padding: 9px 16px;
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* одинаковая ширина для всех фильтров, 
+список и ползунок со своими отступами шире остальных */
+.fatness .filter-bg,
+.fillers .filter-bg {
+  padding: 12px 16px;
 }
 
 .filters select {
   background-color: transparent;
   border: none;
   color: #ffffff;
+  vertical-align: top;
 }
 
 .filters select:active {
@@ -1350,7 +1367,7 @@ form button {
 
 .filters input[type="checkbox"] + label {
   display: inline-block;
-  line-height: baseline;
+  vertical-align: baseline;
   position: relative;
   margin-right: 20px;
   padding-left: 30px;

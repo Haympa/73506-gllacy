@@ -13,7 +13,7 @@
         <a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Лого"></a>
         <nav class="main-navigation">
           <ul>
-            <li><a href="catalog.html">Каталог</a>
+            <li class="active"><a href="catalog.html">Каталог</a>
               <ul class="submenu">
                 <li><a href="#">Новинки</a></li>
                 <li><a href="#">Сливочное</a></li>
@@ -81,14 +81,14 @@
       <div class="breadcrumbs">
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Cливочное</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a>Cливочное</a></li>
         </ul>
       </div>
       <h1>Сливочное мороженое</h1>
       <!-- Фильтры -->
       <form class="filters" action="http://echo.htmlacademy.ru" method="post">
-        <div>
+        <div class="sorting">
           <p class="filter-title">Сортировка:</p>
           <div class="filter-bg">
             <select name="sorting">
@@ -99,13 +99,13 @@
             </select>
           </div>
         </div>
-        <div>
+        <div class="price">
           <p class="filter-title">Цена:</p>
           <div class="filter-bg">
             <input type="range" min="0" max="1000" step="100" value="100">
           </div>
         </div>
-        <div>
+        <div class="fatness">
           <p class="filter-title">Жирность:</p>
           <div class="filter-bg">
             <input type="radio" id="fat0" name="fatness" value="0">
@@ -118,7 +118,7 @@
             <label for="fat30+">выше 30%</label>
           </div>
         </div>
-        <div>
+        <div class="fillers">
           <p class="filter-title">Наполнители:</p>
           <div class="filter-bg">
             <input type="checkbox" id="cho" name="chocolate" checked>
