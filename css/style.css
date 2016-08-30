@@ -46,7 +46,7 @@ body {
 body h1 {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 35px;
-  line-height: 41px;
+  line-height: 1.17em;
   color: #ffffff;
 }
 
@@ -57,6 +57,7 @@ body h1 {
 
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
+
 
 /* Псевдоэлементы с изображениями нужны только 
 для предзагрузки картинок, чтобы они уже были 
@@ -145,7 +146,7 @@ input[id^="switch"] {
 }
 
 /* подчеркивание */
-.main-navigation > ul> li::after {
+.main-navigation > ul > li::after {
   content: "";
   position: absolute;
   bottom: 7px;
@@ -155,7 +156,7 @@ input[id^="switch"] {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.main-navigation > ul> li:hover::after {
+.main-navigation > ul > li:hover::after {
   display: none;
 }
 
@@ -272,11 +273,16 @@ input[id^="switch"] {
   box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 1);
 }
 
+form button {
+  outline: none;
+}
+
 /* Оформление блока пользователя: поиск, вход, корзина */
 .user-block {
   position: relative;
   float: right;
   width: 267px;
+  margin-top: 23px;
   font-size: 0;
 }
 
@@ -306,7 +312,6 @@ input[id^="switch"] {
   position: relative;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-top: 23px;
   margin-right: 10px;
   vertical-align: middle;
   border-radius: 15px;
@@ -409,7 +414,7 @@ input[id^="switch"] {
   float: left;
   border: none;
   width: 100px;
-  padding: 13px 20px;
+  padding: 10px 25px;
   border-radius: 25px;
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 18px;
@@ -640,6 +645,11 @@ input[id^="switch"] {
   background-color: transparent;
 }
 
+.switch label:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
 /* текст в зависимости от выбранного переключателя */
 #switch1:checked ~ .wrapper #slide1,
 #switch2:checked ~ .wrapper #slide2,
@@ -757,6 +767,8 @@ input[id^="switch"] {
 
 .product-item .hit {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .product-item p {
@@ -777,8 +789,8 @@ input[id^="switch"] {
   line-height: 22px;
 }
 
-.product-item a:hover,
-.product-item a:active {
+.product-item a:first-of-type:hover,
+.product-item a:first-of-type:active {
   color: #ffbc9e;
 }
 
@@ -795,18 +807,22 @@ input[id^="switch"] {
   position: absolute;
   left: -13px;
   top: -6px;
+  z-index: -1; /* подложка снизу */
   width: 110%;
   height: 125%;
   border-radius: 5px;
-  background-color: rgb(248, 247, 244);
-  opacity: 0.3;
+  background-color: rgba(248, 247, 244, 0.3);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
+}
+
+/* При наведении подложка перекрывает нижний продукт */
+.product-item:hover {
+  z-index: 1;
 }
 
 .product-item:hover::before {
   display: block;
 }
-
 
 .product-item .view {
   display: none;
@@ -825,6 +841,7 @@ input[id^="switch"] {
   min-height: 300px;
   padding-left: 21px;
   margin-bottom: 40px;
+  border-radius: 15px;
   color: #323232;
   background:#ede2c8 url("../img/wafer.jpg");
 }
@@ -858,7 +875,7 @@ input[id^="switch"] {
 }
 
 .description p:nth-of-type(1)::after {
-  background: url("../img/ico-esKimo.svg") no-repeat 50% 50%;
+  background: url("../img/ico-eskimo.svg") no-repeat 50% 50%;
 }
 .description p:nth-of-type(2)::after {
   background: url("../img/ico-cow.svg") no-repeat 50% 50%;
@@ -1144,6 +1161,16 @@ input[id^="switch"] {
   background: url("../img/heart.svg") no-repeat 50% 50%;
 }
 
+.footer-menu li:hover::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  background: url("../img/heart.svg") no-repeat 50% 50%;
+}
+
 .footer-copyright {
   float: right;
   width: 267px;
@@ -1229,6 +1256,7 @@ input[id^="switch"] {
 .breadcrumbs li:not(:last-of-type) a::after {
   content: "\bb";
   margin: 0 8px;
+  color: #ffffff;
 } 
 
 .filters {
@@ -1293,27 +1321,26 @@ input[id^="switch"] {
   left: -30px;
   width: 20px;
   height: 20px;
-  background: url("../img/radio-off.svg") no-repeat;
+  border-radius: 50%;
+  border: 1px solid #f8f7f4;
+  background-color: transparent;
 }
 
 /* выбранная радиокнопка */
 .filters input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
-  top: -1px;
-  left: -30px;
-  width: 20px;
-  height: 20px;
-  background: url("../img/radio-on.svg") no-repeat;
+  top: 4px;
+  left: -25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f8f7f4;
 } 
 
 /* наведение на радиокнопки */
 .filters input[type="radio"] + label:hover::before{
-  background: url("../img/radio-hover-off.svg") no-repeat;
-}
-
-.filters input[type="radio"]:checked + label:hover::after{
-  background: url("../img/radio-hover-on.svg") no-repeat;
+  box-shadow: inset 0 0 0 1px #f8f7f4;
 }
 
 /* Свои чекбоксы */
@@ -1337,27 +1364,25 @@ input[id^="switch"] {
   left: 0px;
   width: 20px;
   height: 20px;
-  background: url("../img/checkbox-off.svg") no-repeat;
+  border-radius: 4px;
+  border: 1px solid #f8f7f4;
+  background-color: transparent;
 }
 
 /* выбранный чекбокс */
 .filters input[type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
   background: url("../img/checkbox-on.svg") no-repeat;
 } 
 
 /* наведение на чекбоксы */
 .filters input[type="checkbox"] + label:hover::before{
-  background: url("../img/checkbox-hover-off.svg") no-repeat;
-}
-
-.filters input[type="checkbox"]:checked + label:hover::after{
-  background: url("../img/checkbox-hover-on.svg") no-repeat;
+  box-shadow: inset 0 0 0 1px #f8f7f4;
 }
 
 .filters > div:last-child {
@@ -1437,13 +1462,14 @@ input[id^="switch"] {
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover {
-  border: 2px solid #c7c6c5;
+  box-shadow: 0 0 0 2px #c7c6c5;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  outline: 2px solid #8fbdec;
+  outline: none;
+  box-shadow: 0 0 0 2px #8fbdec;
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
