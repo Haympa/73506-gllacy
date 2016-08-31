@@ -54,8 +54,6 @@ body h1 {
   min-width: 1200px;
   background-repeat: no-repeat;
   background-position: top center;
-
-  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 
@@ -1013,23 +1011,99 @@ form button {
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 }
 
-/*.overlay {
-  position: absolute;
+.overlay {
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
   background-color: rgba(0, 0, 0, 0.3);
-}*/
+}
+
+.overlay-show {
+  display: block;
+}
+
+@-webkit-keyframes show {
+  0% {
+    left: -700px;
+    top: -500px;
+  }
+  25% {
+    left: 0;
+    top: 0;
+    transform: skewX(5deg);
+  }
+  75% {
+    left: 35%;
+    top: 35%;
+    transform: skewX(10deg);
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes show {
+  0% {
+    left: -700px;
+    top: -500px;
+  }
+  25% {
+    left: 0;
+    top: 0;
+    transform: skewX(5deg);
+  }
+  75% {
+    left: 35%;
+    top: 35%;
+    transform: skewX(10deg);
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes error {
+  0%, 100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(-52%, -50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-48%, -50%);
+  } 
+}
+
+@-webkit-keyframes error {
+  0%, 100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(-52%, -50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-48%, -50%);
+  } 
+}
 
 /* Скрытое всплывающее окно обратной связи */
 .feedback {
   display: none;
-  position: absolute;
-  top: 338px;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 5;
   width: 478px;
   background-color: #f8f7f4;
@@ -1041,6 +1115,16 @@ form button {
 
 .feedback-show {
   display: block;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.error {
+  animation-name: error;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 
 .feedback * {
@@ -1084,12 +1168,20 @@ form button {
   transform: rotate(-45deg);
 }
 
+/*.feedback form {
+  color: #999999;
+  font-size: 16px;
+  line-height: 1.5em;
+}*/
+
 .feedback input {
   width: 266px;
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #d3d3d2;
   color: #999999;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 .feedback textarea {
@@ -1551,6 +1643,4 @@ textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px #8fbdec;
   font-family: "RobotoBold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
 }

@@ -16,13 +16,13 @@
       <div class="container"> <!-- обертка для контента -->
         <!-- Шапка сайта -->
         <header class="main-header">
-          <a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Лого"></a>
+          <img class="logo" src="img/logo.svg" width="154" height="64" alt="Лого">
           <nav class="main-navigation">
             <ul>
-              <li><a href="catalog.html">Каталог</a>
+              <li><a href="#">Каталог</a>
                 <ul class="submenu">
                   <li><a href="#">Новинки</a></li>
-                  <li><a href="#">Сливочное</a></li>
+                  <li><a href="catalog.html">Сливочное</a></li>
                   <li><a href="#">Щербеты</a></li>
                   <li><a href="#">Фруктовый лед</a></li>
                   <li><a href="#">Мелорин</a></li>
@@ -204,19 +204,18 @@
           </div>
         </footer>
       </div>
+      <div class="overlay"></div>
+      <div class="feedback clearfix">
+        <h2>Мы обязательно вам ответим!</h2>
+        <button type="button" class="close"></button>
+        <form action="http://echo.htmlacademy.ru" method="post">
+          <input type="text" name="name" placeholder="Как вас зовут?">
+          <input type="email" name="email" placeholder="Ваша почта для ответа?">
+          <textarea name="sometext" placeholder="Напишите что-нибудь" rows="5"></textarea>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </div>
     </div>
-
-    <div class="feedback clearfix">
-      <h2>Мы обязательно вам ответим!</h2>
-      <button type="button" class="close"></button>
-      <form action="http://echo.htmlacademy.ru" method="post">
-        <input type="text" name="name" placeholder="Как вас зовут?">
-        <input type="email" name="email" placeholder="Ваша почта для ответа?">
-        <textarea name="sometext" placeholder="Напишите что-нибудь" rows="10"></textarea>
-        <button class="button" type="submit">Отправить</button>
-      </form>
-    </div>
-
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
@@ -246,47 +245,53 @@
 
     <script>
       var openBtn = document.querySelector(".contact .button");
+      var overlay = document.querySelector(".overlay");
       var feedback = document.querySelector(".feedback");
       var closeBtn = feedback.querySelector(".close");
       var form = feedback.querySelector("form");
       var username = form.querySelector("[name=name]");
       var email = form.querySelector("[name=email]");
       var text = form.querySelector("textarea");
-      var usernameStrg = localStorage.getItem("username");
-      var emailStrg = localStorage.getItem("email");
+      // var usernameStrg = localStorage.getItem("username");
+      // var emailStrg = localStorage.getItem("email");
 
       // открытие окна обратной связи
       openBtn.addEventListener("click", function(event) { 
         event.preventDefault(); 
         feedback.classList.add("feedback-show");
-        if (usernameStrg) {
-          username.value = usernameStrg;
-          if (emailStrg) {
-            email.value = emailStrg;
-            text.focus();
-          } else {
-            email.focus(); 
-          } 
-        } else {
-          username.focus();
-        }  
+        overlay.classList.add("overlay-show");
+        // if (usernameStrg) {
+        //   username.value = usernameStrg;
+        //   if (emailStrg) {
+        //     email.value = emailStrg;
+        //     text.focus();
+        //   } else {
+        //     email.focus(); 
+        //   } 
+        // } else {
+        //   username.focus();
+        // }  
+        username.focus();
       });
 
       // проверка заполнения обязательных полей
       form.addEventListener("submit", function(event) {
         if (!username.value || !email.value) {
           event.preventDefault();
-          console.log("Нужно ввести имя и почту"); 
-        } else {
-          localStorage.setItem("username", username.value);
-          localStorage.setItem("email", email.value);
-        }
+          feedback.classList.add("error") ;
+        } 
+        // else {
+        //   localStorage.setItem("username", username.value);
+        //   localStorage.setItem("email", email.value);
+        // }
       });
 
       // закрытие формы на крестик
       closeBtn.addEventListener("click", function(event) {
         event.preventDefault();
         feedback.classList.remove("feedback-show");
+        feedback.classList.remove("error");
+        overlay.classList.remove("overlay-show");
       });
 
       // закрытие формы по нажатию на ESC
@@ -294,8 +299,16 @@
         if (event.keyCode === 27) {
           if (feedback.classList.contains("feedback-show")) {
             feedback.classList.remove("feedback-show");
+            feedback.classList.remove("error");
+            overlay.classList.remove("overlay-show");
           }
         }
+      });
+      // закрытие формы по клику вне формы
+      overlay.addEventListener("click", function() {
+        feedback.classList.remove("feedback-show");
+        feedback.classList.remove("error");
+        overlay.classList.remove("overlay-show");
       });
     </script>
   </body>
