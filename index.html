@@ -278,7 +278,9 @@
       form.addEventListener("submit", function(event) {
         if (!username.value || !email.value) {
           event.preventDefault();
-          feedback.classList.add("error") ;
+          feedback.classList.remove("error");
+          feedback.offsetWidth = feedback.offsetWidth;
+          feedback.classList.add("error");
         } 
         // else {
         //   localStorage.setItem("username", username.value);

@@ -585,7 +585,6 @@ form button {
   color: #fefefe;
 }
 
-
 .phone {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 14px;
@@ -1069,7 +1068,7 @@ form button {
   }
 }
 
-@keyframes error {
+@-webkit-keyframes error {
   0%, 100% {
     top: 50%;
     left: 50%;
@@ -1083,7 +1082,7 @@ form button {
   } 
 }
 
-@-webkit-keyframes error {
+@keyframes error {
   0%, 100% {
     top: 50%;
     left: 50%;
@@ -1167,18 +1166,14 @@ form button {
   transform: rotate(-45deg);
 }
 
-/*.feedback form {
-  color: #999999;
-  font-size: 16px;
-  line-height: 1.5em;
-}*/
-
 .feedback input {
   width: 266px;
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #d3d3d2;
-  color: #999999;
+  background-color: #ffffff;
+  font-family: "RobotoBold", "Arial", sans-serif;
+  color: #323232;
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -1188,7 +1183,11 @@ form button {
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #d3d3d2;
-  color: #999999;
+  background-color: #ffffff;
+  font-family: "RobotoBold", "Arial", sans-serif;
+  color: #323232;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 .feedback .button {
@@ -1628,6 +1627,7 @@ form button {
   color: #323232;
 }
 
+
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
@@ -1642,4 +1642,35 @@ textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px #8fbdec;
   font-family: "RobotoBold", "Arial", sans-serif;
+  color: #323232;
 }
+
+::-webkit-input-placeholder{
+    font-family: "RobotoRegular", "Arial", sans-serif;  
+    color: #999999;
+}
+::-moz-placeholder {
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+  color: #999999;
+}
+:-moz-placeholder {
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+  color: #999999;
+}
+:-ms-input-placeholder {
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+  color: #999999;
+}
+
+/*:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+:focus::-moz-placeholder {
+  color: transparent;
+}
+:focus:-moz-placeholder {
+  color: transparent;
+}
+:focus:-ms-input-placeholder {
+  color: transparent;
+}*/
