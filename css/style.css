@@ -1118,7 +1118,6 @@ form button {
   animation-name: show;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
 }
 
 .error {
