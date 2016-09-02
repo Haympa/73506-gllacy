@@ -40,7 +40,7 @@ body {
   line-height: 16px;
   color: #ffffff;
   font-family: "RobotoRegular", "Arial", sans-serif;
-  background-color: #849d8f;
+  background-color: #859d8f;
 }
 
 body h1 {
@@ -1354,6 +1354,18 @@ form button {
 }
 
 /* catalog.html */
+.background {
+  background: #859d8f;
+  background: -moz-linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%, 
+    #9bafa4 6%, #96aa9f 14%, #94aa9d 14%, #91a79b 21%, #8fa598 24%, #8da396 24%, 
+    #8ca497 27%, #89a193 29%, #859d8f 38%, #859d8f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%,
+    #9bafa4 6%, #96aa9f 14%, #94aa9d 14%, #91a79b 21%, #8fa598 24%, #8da396 24%, 
+    #8ca497 27%, #89a193 29%, #859d8f 38%, #859d8f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%, #9bafa4 6%, 
+    #96aa9f 14%, #94aa9d 14%,#91a79b 21%, #8fa598 24%, #8da396 24%, #8ca497 27%, 
+    #89a193 29%, #859d8f 38%, #859d8f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
 /* Хлебные крошки */
 .breadcrumbs {
