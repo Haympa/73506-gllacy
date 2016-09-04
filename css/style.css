@@ -158,9 +158,10 @@ input[id^="switch"] {
   padding: 7px 14px;
 
   color: #ffffff;
-
+  
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.13em;
+  font-family: "RobotoBold", "Arial", sans-serif;
   text-decoration: none;
 }
 
@@ -196,7 +197,6 @@ input[id^="switch"] {
   background-color: #f7f6f3;
   border-radius: 15px;
 
-  font-weight: bold;
   text-decoration: none;
 }
 
