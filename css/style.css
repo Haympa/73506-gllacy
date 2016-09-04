@@ -352,7 +352,6 @@ form button {
 }
 
 .user-block .hidden input {
-  color: #999999;
   border: 1px solid #d3d3d2;
   border-radius: 6px;
 }
@@ -1902,9 +1901,9 @@ textarea:focus {
 }
 
 ::-webkit-input-placeholder{
-    color: #999999;
+  color: #999999;
 
-    font-family: "RobotoRegular", "Arial", sans-serif;  
+  font-family: "RobotoRegular", "Arial", sans-serif;  
 }
 ::-moz-placeholder {
   color: #999999;
