@@ -1874,6 +1874,14 @@ form button {
   background-color: #ffffff;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  color: #323223;
+
+  font-family: "RobotoBold", "Arial", sans-serif;
+}
 
 input[type="text"]:hover,
 input[type="email"]:hover,
