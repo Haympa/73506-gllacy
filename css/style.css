@@ -286,7 +286,6 @@ input[id^="switch"] {
   background-color: #d1d0ce;
 }
 
-
 /* стиль пункта вложенного меню при наведении */
 .submenu a:hover {
   background-color: #fbded7;
