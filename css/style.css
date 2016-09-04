@@ -403,7 +403,7 @@ form button {
 .search .hidden input {
   width: 100%;
   height: 34px;
-  padding: 15px;
+  padding: 0 15px;
 
   background-color: #ffffff;
 }
@@ -1389,9 +1389,9 @@ form button {
   height: 37px;
   margin-top: 5px;
   margin-right: 11px;
-  margin-left: 5px;
-
-  background-color: #e6ebe9;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   opacity: 0.8;
@@ -1405,22 +1405,25 @@ form button {
 }
 
 .footer-social a:active {
-  border-color: rgba(255, 255,255, 0.7);
+  border-color: rgba(255, 255, 255, 0.7);
   box-shadow: inset 0 2px 1px 0 #888888;
   opacity: 1;
 }
 
 .footer-social .tw {
-  background: url("../img/social-twitter.svg") no-repeat;
+  background-image: url("../img/social-twitter.svg");
 }
+
 .footer-social .ins {
-  background: url("../img/social-instagram.svg") no-repeat;
+  background-image: url("../img/social-instagram.svg");
 }
+
 .footer-social .fb {
-  background: url("../img/social-facebook.svg") no-repeat;
+  background-image: url("../img/social-facebook.svg");
 }
+
 .footer-social .vk {
-  background: url("../img/social-vkontakte.svg") no-repeat;
+  background-image: url("../img/social-vkontakte.svg");
 }
 
 .footer-menu {
