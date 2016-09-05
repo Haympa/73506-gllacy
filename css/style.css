@@ -98,12 +98,13 @@ input[id^="switch"] {
   display: none;
 }
 
-#map {
+.gllacy-map {
   position: relative;
 
-  width: 1200px;
+ /* width: 1200px;
+  margin: 0 auto;*/
+  width: 100%;
   height: 430px;
-  margin-left: -27px;
 
   /* карта-фон, если интерактивная не подгрузится */
   background: #ebe4c7 url("../img/map.jpg");
@@ -113,6 +114,90 @@ input[id^="switch"] {
   content: "";
   display: table;
   clear: both;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: -18px;
+  left: 15px;
+
+  color: #5b9ddf;
+
+  font-size: 11px;
+  font-family: "RobotoRegular", "Arial", sans-serif;
+
+  visibility: hidden;
+}
+
+.input-wrapper input:focus + label {
+  visibility: visible;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  color: #323223;
+
+  font-family: "RobotoBold", "Arial", sans-serif;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+  /* при использовании border поле дергается */
+  box-shadow: 0 0 0 1px #c7c6c5;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  color: #323232;
+  outline: none;
+  /* при использовании border поле дергается */
+  box-shadow: 0 0 0 2px #8fbdec;
+
+  font-family: "RobotoBold", "Arial", sans-serif;
+}
+
+::-webkit-input-placeholder{
+  color: #999999;
+
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+}
+::-moz-placeholder {
+  color: #999999;
+
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+}
+:-moz-placeholder {
+  color: #999999;
+
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+}
+:-ms-input-placeholder {
+  color: #999999;
+
+  font-family: "RobotoRegular", "Arial", sans-serif;  
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+:focus::-moz-placeholder {
+  color: transparent;
+}
+:focus:-moz-placeholder {
+  color: transparent;
+}
+:focus:-ms-input-placeholder {
+  color: transparent;
 }
 
 .main-header {
@@ -206,7 +291,7 @@ input[id^="switch"] {
 }
 
 /* стиль пункта меню при нажатии */
-.main-navigation > ul > li:active > a {
+.main-navigation > ul > li > a:active {
   box-shadow: inset 0 1px 2px 1px #696969;
 }
 
@@ -300,6 +385,7 @@ input[id^="switch"] {
   display: inline-block;
 
   color: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ca3824, #f26843);
   background: linear-gradient(to top, #ca3824, #f26843);
   border-radius: 22px;
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
@@ -311,11 +397,13 @@ input[id^="switch"] {
 }
 
 .button:hover {
+  background: -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
   background: linear-gradient(to top, #ec6f5e, #f58669);
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .button:active {
+  background: -webkit-linear-gradient(top, #e74a35, #f26843);
   background: linear-gradient(to bottom, #e74a35, #f26843);
   box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 1);
 }
@@ -646,7 +734,7 @@ form button {
   width: 245px;
 }
 
-.filled-basket .hidden td span {
+.filled-basket .hidden span {
   color: #999999;
 }
 
@@ -799,8 +887,10 @@ form button {
   min-height: 229px;
   margin-right: 26px;
   padding-right: 21px;
+  padding-bottom: 24px;
   padding-left: 19px;
 
+  background-size: cover;
   border-radius: 16px;
 
   text-align: right;
@@ -831,11 +921,13 @@ form button {
 }
 
 .banner-item:nth-child(1) {
-  background: #c00432 url("../img/raspberry.jpg");
+  background-color: #c00432;
+  background-image: url("../img/raspberry.jpg");
 }
 
 .banner-item:nth-child(2) {
-  background: #56301c url("../img/chocolate.jpg");
+  background-color: #56301c;
+  background-image: url("../img/chocolate.jpg");
 }
 
 /* Главная страница + Каталог, список продуктов */
@@ -1028,6 +1120,7 @@ form button {
   padding-left: 20px;
 
   background: #ffffff url("../img/strawberry-background.jpg") no-repeat;
+  background-size: cover;
   border-radius: 15px;
 }
 
@@ -1042,6 +1135,7 @@ form button {
 .news a {
   display: block;
   width: 285px;
+  padding-bottom: 10px;
 
   color: #323232;
   
@@ -1061,6 +1155,7 @@ form button {
   padding: 30px 26px;
 
   background: #f8f7f4 url("../img/subs.jpg") no-repeat;
+  background-size: 100% 100%;
   border-radius: 15px;
 }
 
@@ -1080,7 +1175,7 @@ form button {
   border: none;
 }
 
-.subs input {
+.subs input {  
   width: 363px;
   margin-right: 11px;
   padding: 12px 14px;
@@ -1205,13 +1300,16 @@ form button {
   0%, 100% {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   20%, 40%, 60%, 80% {
-    transform: translate(-52%, -50%);
+    -webkit-transform: translate(-52%, -50%);
+            transform: translate(-52%, -50%);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translate(-48%, -50%);
+    -webkit-transform: translate(-48%, -50%);
+            transform: translate(-48%, -50%);
   } 
 }
 
@@ -1219,13 +1317,16 @@ form button {
   0%, 100% {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   20%, 40%, 60%, 80% {
-    transform: translate(-52%, -50%);
+    -webkit-transform: translate(-52%, -50%);
+            transform: translate(-52%, -50%);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translate(-48%, -50%);
+    -webkit-transform: translate(-48%, -50%);
+            transform: translate(-48%, -50%);
   } 
 }
 
@@ -1246,7 +1347,8 @@ form button {
 
   font-size: 14px;
 
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @-webkit-keyframes show {
@@ -1265,16 +1367,23 @@ form button {
 
 .feedback-show {
   display: block;
-  animation-name: show;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .error {
-  animation-name: error;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
+  -webkit-animation-name: error;
+          animation-name: error;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .feedback * {
@@ -1317,11 +1426,13 @@ form button {
 }
 
 .feedback .close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .feedback .close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .feedback input {
@@ -1560,13 +1671,13 @@ form button {
 
 /* catalog.html */
 .background {
-  background: #859d8f;
-  background: -moz-linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%, 
-    #9bafa4 6%, #96aa9f 14%, #94aa9d 14%, #91a79b 21%, #8fa598 24%, #8da396 24%, 
-    #8ca497 27%, #89a193 29%, #859d8f 38%, #859d8f 100%); /* FF3.6-15 */
+  background: #859d8f; /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%,
     #9bafa4 6%, #96aa9f 14%, #94aa9d 14%, #91a79b 21%, #8fa598 24%, #8da396 24%, 
     #8ca497 27%, #89a193 29%, #859d8f 38%, #859d8f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%, #9bafa4 6%, 
+    #96aa9f 14%, #94aa9d 14%,#91a79b 21%, #8fa598 24%, #8da396 24%, #8ca497 27%, 
+    #89a193 29%, #859d8f 38%, #859d8f 100%);
   background: linear-gradient(top, #9cb0a5 0%, #9bafa4 5%, #99afa2 6%, #9bafa4 6%, 
     #96aa9f 14%, #94aa9d 14%,#91a79b 21%, #8fa598 24%, #8da396 24%, #8ca497 27%, 
     #89a193 29%, #859d8f 38%, #859d8f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -1881,65 +1992,4 @@ form button {
 .pages li:active:not(:first-child):not(:last-child) a {
   color: #323232;
   background-color: #ffffff;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  color: #323223;
-
-  font-family: "RobotoBold", "Arial", sans-serif;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-textarea:hover {
-  box-shadow: 0 0 0 1px #c7c6c5;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-  color: #323232;
-  outline: none;
-  box-shadow: 0 0 0 2px #8fbdec;
-
-  font-family: "RobotoBold", "Arial", sans-serif;
-}
-
-::-webkit-input-placeholder{
-  color: #999999;
-
-  font-family: "RobotoRegular", "Arial", sans-serif;  
-}
-::-moz-placeholder {
-  color: #999999;
-
-  font-family: "RobotoRegular", "Arial", sans-serif;  
-}
-:-moz-placeholder {
-  color: #999999;
-
-  font-family: "RobotoRegular", "Arial", sans-serif;  
-}
-:-ms-input-placeholder {
-  color: #999999;
-
-  font-family: "RobotoRegular", "Arial", sans-serif;  
-}
-
-:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-:focus::-moz-placeholder {
-  color: transparent;
-}
-:focus:-moz-placeholder {
-  color: transparent;
-}
-:focus:-ms-input-placeholder {
-  color: transparent;
 }

@@ -30,17 +30,26 @@
           <div class="search">
             <a href="#"></a>
             <div class="hidden">
-              <input type="text" name="search" placeholder="Что ищем?">
+              <div class="input-wrapper">
+                  <input type="text" name="search" id="search" placeholder="Что ищем?">
+                  <label for="search">Что ищем?</label>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="login">
-            <a href="#">Вход</a>
-            <div class="hidden">
-              <form action="http://echo.htmlacademy.ru" method="post">
-                <input type="email" name="login" placeholder="Электронная почта" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <button class="button" type="submit">Войти</button>
-              </form>
+            <div class="login">
+              <a href="#">Вход</a>
+              <div class="hidden">
+                <form action="http://echo.htmlacademy.ru" method="post">
+                  <div class="input-wrapper">
+                    <input type="email" name="login" id="login" placeholder="Электронная почта" required>
+                    <label for="login">Электронная почта</label>
+                  </div>
+                  <div class="input-wrapper">
+                    <input type="password" name="password" id="password" placeholder="Пароль" required>
+                    <label for="password">Пароль</label>
+                  </div>
+                  <button class="button" type="submit">Войти</button>
+                </form>
               <div class="link">
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация?</a>
